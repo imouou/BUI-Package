@@ -1,6 +1,9 @@
 // 打包需要更改为 false; 
 // 检测更新的下载,需要用到原生方法,所以这里要设置为false切换成原生平台
 bui.isWebapp = false;
+// 打包的时候使用原生上传
+bui.config.upload = { needNative: true }
+
 // 网站配置
 var sitePath = "http://www.easybui.com",
     siteDir = sitePath + "/demo/json/";

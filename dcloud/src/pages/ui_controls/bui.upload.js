@@ -20,23 +20,30 @@
                     uiUpload.add({
                         "from": "camera",
                         "onSuccess": function(val, data) {
-                            // 展示base64本地图片, 建议直接调用start方法上传以后再展示远程地址,避免应用崩溃
+                            // 展示base64本地图片 建议直接调用start方法上传以后再展示远程地址,避免应用崩溃
+                            this.toBase64({
+                                onSuccess: function(url) {
+                                    $uploadBtn.before(templatePhoto(url))
+
+                                }
+                            });
+                            // 新的展示本地图片方式,部分手机不支持
                             // var url = window.URL.createObjectURL(val[0]);
                             // $uploadBtn.before(templatePhoto(url))
 
                             // 直接调用start上传图片
-                            this.start({
-                                header: {},
-                                url: "http://easybui.com/images/",
-                                onSuccess: function(data) {
-                                    console.log(data, "success");
-                                    // 成功
-                                },
-                                onFail: function(data) {
-                                    console.log(data, "fail");
-                                    // 失败
-                                },
-                            })
+                            // this.start({
+                            //     header: {},
+                            //     url: "http://easybui.com/images/",
+                            //     onSuccess: function(data) {
+                            //         console.log(data, "success");
+                            //         // 成功
+                            //     },
+                            //     onFail: function(data) {
+                            //         console.log(data, "fail");
+                            //         // 失败
+                            //     },
+                            // })
                         }
                     })
 
@@ -46,9 +53,17 @@
                     uiUpload.add({
                         "from": "",
                         "onSuccess": function(val, data) {
-                            // 展示base64本地图片, 建议直接调用start方法上传以后再展示远程地址,避免应用崩溃
-                            var url = window.URL.createObjectURL(val[0]);
-                            $uploadBtn.before(templatePhoto(url))
+
+                            // 展示base64本地图片 建议直接调用start方法上传以后再展示远程地址,避免应用崩溃
+                            this.toBase64({
+                                onSuccess: function(url) {
+                                    $uploadBtn.before(templatePhoto(url))
+
+                                }
+                            });
+                            // 新的展示本地图片方式,部分手机不支持
+                            // var url = window.URL.createObjectURL(val[0]);
+                            // $uploadBtn.before(templatePhoto(url))
 
                             // 直接调用start上传图片
                             // this.start({
