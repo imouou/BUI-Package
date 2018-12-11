@@ -8,7 +8,7 @@ npm install
 # 预览dcloud平台demo
 npm run dev-dcloud
 
-# 打包压缩版的demo 用于上传
+# 打包压缩版的demo 用于上传, 最终复制 dcloud/dist 目录的文件去覆盖 dcloud的应用,便可打包
 npm run build-dcloud
 ```
 
