@@ -1,0 +1,54 @@
+<!-- 这里还是一个标准的BUI页面 -->
+<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn btn-back"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">接收传参</div>
+        <div class="bui-bar-right"></div>
+    </header>
+    <main>
+        <h3 class="section-title">接收传参</h3>
+        <div class="container-xy">
+            <p>用法: router.getPageParams();</p>
+            <p>**注意** 如果要保持跟多页方式一致,则使用 bui.getPageParams() </p>
+            
+        </div>
+        <h3 class="section-title">用法1: 接收传参 router.getPageParams </h3>
+        <div class="bui-panel">
+            <div class="bui-panel-head">示例:</div>
+            <div class="bui-panel-main">
+                <div class="container">
+                    <xmp>
+// 方法1: 
+
+var params = router.getPageParams();
+
+                    </xmp>
+                </div>
+            </div>
+        </div>
+        <div class="bui-panel">
+            <div class="bui-panel-head">示例:</div>
+            <div class="bui-panel-main">
+                <div class="container">
+                    <xmp>
+// 方法2: 跟多页的获取方式保持一致
+        
+var getParams = bui.getPageParams();
+
+    getParams.done(function(res){
+      console.log(res)
+    })
+
+                    </xmp>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container-xy">
+            <div id="backToMain" class="bui-btn primary round">后退到路由页并刷新</div>
+        </div>
+    </footer>
+</div>

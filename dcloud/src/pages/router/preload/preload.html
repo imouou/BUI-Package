@@ -1,0 +1,64 @@
+<!-- 这里还是一个标准的BUI页面 -->
+<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn btn-back"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">预加载-router.preload</div>
+        <div class="bui-bar-right"></div>
+    </header>
+    <main>
+        <div class="container-xy">
+            <p>用法: router.preload(object|array);</p>
+        </div>
+        <table class="bui-table">
+            <tr>
+                <th>字段名</th>
+                <th>类型</th>
+                <th>必须</th>
+            </tr>
+            <tr>
+                <td>obj</td>
+                <td>object|array</td>
+                <th>&nbsp;</th>
+            </tr>
+            <tr>
+                <td>obj.url</td>
+                <td>string</td>
+                <th>是</th>
+            </tr>
+            <tr>
+                <td>obj.style</td>
+                <td>string</td>
+                <th>否</th>
+            </tr>
+            <tr>
+                <td>obj.script</td>
+                <td>string</td>
+                <th>否</th>
+            </tr>
+        </table>
+        <h3 class="section-title">预加载</h3>
+        <div class="bui-panel">
+            <div class="bui-panel-head">示例:</div>
+            <div class="bui-panel-main">
+                <div class="container">
+                    <xmp>
+// 路由预加载几个首页,有助于网络较慢时,或者网络不通时,点击无法跳转响应等问题.
+var uiLoading = bui.loading();
+uiLoading.start();
+
+router.preload([{
+    url:"pages/ui/index.html"
+},{
+    url:"pages/ui_loader/index.html"
+}]).then(function () {
+    // 全部预加载完以后关闭进度条
+    uiLoading.stop();
+})
+                    </xmp>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

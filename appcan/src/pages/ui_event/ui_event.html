@@ -1,0 +1,61 @@
+﻿
+<div class="bui-page">
+	<header class="bui-bar">
+		<div class="bui-bar-left">
+			<a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+		</div>
+		<div class="bui-bar-main">控件事件</div>
+		<div class="bui-bar-right">
+		</div>
+	</header>
+	<main>
+		<dl class="bui-accordion">
+			<dt class="bui-btn bui-box">
+				<div class="span1">折叠菜单 ( bui.accordion )</div>
+				<i class="icon-accordion"></i>
+			</dt>
+			<dd style="display: none;">
+				<ul class="bui-list">
+					<li class="bui-btn">折叠菜单</li>
+					<li class="bui-btn">折叠面板</li>
+				</ul>
+			</dd>
+			<dt class="bui-btn bui-box">
+				<div class="span1">下拉选择菜单 ( bui.select )</div>
+				<i class="icon-accordion"></i>
+			</dt>
+			<dd style="display: none;">
+				<ul class="bui-list">
+					<li class="bui-btn">下拉选择菜单</li>
+					<li class="bui-btn">下拉选择菜单_弹出</li>
+				</ul>
+			</dd>
+		</dl>
+
+		<div class="bui-panel">
+			<div class="bui-panel-head">示例:</div>
+			<div class="bui-panel-main">
+				<div class="container">
+			 		<h4>js:</h4>
+					<xmp>
+// 初始化折叠菜单
+var uiAccordion = bui.accordion();
+
+// this指向 uiAccordion
+uiAccordion.on("show",function () {
+	console.log("展开时状态")
+});
+
+uiAccordion.on("hide",function () {
+	console.log("关闭时触发")
+});
+
+
+			 		</xmp>
+					
+				</div>
+			</div>
+		</div>
+
+	</main>
+</div>

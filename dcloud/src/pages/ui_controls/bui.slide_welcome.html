@@ -1,0 +1,72 @@
+﻿<style>
+    .bui-slide .bui-slide-head .active {
+        background: #39A4FF;
+    }
+    .welcome {
+        padding: .3rem;
+    }
+    .welcome h2{
+        font-size: .64rem;
+        margin-bottom: .3rem;
+        color: #2D3F52;
+    }
+    .welcome p{
+        font-size: .3rem;
+        margin-bottom: .3rem;
+        color: #747986;
+    }
+    .welcome .bui-btn{
+        display: inline-block;
+    }
+    .bui-btn-jump {
+        position: absolute;
+        top: .2rem;
+        right: .2rem;
+        width: 1rem;
+        padding: 0;
+        z-index: 12;
+    }
+
+</style>
+<div class="bui-page">
+	<header class="bui-bar">
+		<div class="bui-bar-left">
+			<a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+		</div>
+		<div class="bui-bar-main">欢迎引导页</div>
+		<div class="bui-bar-right">
+		</div>
+	</header>
+	<main>
+		<img src="images/placeholder-list.png" alt="">
+	</main>
+</div>
+<div class="bui-btn-jump round default mini" title="跳过"></div>
+<div id="slide" class="bui-slide">
+    <div class="bui-slide-main">
+        <ul>
+            <li>
+                <div class="welcome">
+                    <img src="images/welcome01.png" alt="">
+                    <h2>超低门槛</h2>
+                    <p>BUI 只要会JS+HTML，5分钟就能快速上手，前端菜鸟及后端开发的福音</p>
+                </div>
+            </li>
+            <li>
+                <div class="welcome">
+                    <img src="images/welcome02.png" alt="">
+                    <h2>超快手打</h2>
+                    <p>提供Fast编写插件，打一行出十行，快速提升开发效率(  支持sublim、atom、link、apidoud、webstorm等)</p>
+                </div>
+            </li>
+            <li>
+                <div class="welcome">
+                    <img src="images/welcome03.png" alt="">
+                    <h2>超多案例</h2>
+                    <p>提供78个基础控件/组件，14个交互方式组件， 28套模板，7个完整的解决方案，还在持续增加中</p>
+                    <p><div id="enter" class="bui-btn round primary">马上开始</div></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

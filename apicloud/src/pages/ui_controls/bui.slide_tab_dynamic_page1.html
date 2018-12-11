@@ -1,0 +1,45 @@
+﻿<div class="bui-panel" style="margin-top:0;">
+    <div class="bui-panel-head">动态加载示例:</div>
+    <div class="bui-panel-main">
+        <div class="container">
+            <h4>html:</h4>
+<xmp>
+<div id="tabNews" class="bui-tab">
+  <div class="bui-tab-main">
+    <ul>
+      <li>滑动的内容</li>
+      <li>滑动的内容</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 菜单在外层 要用id -->
+<!-- 4. 给菜单加一个href链接地址 -->
+<ul id="tabNav" class="bui-nav">
+    <li class="bui-btn bui-box-vertical active"><i class="icon-home"><span class="bui-badges">15</span></i><div class="span1">首页</div></li>
+    <li class="bui-btn bui-box-vertical"><i class="icon-share"></i><div class="span1">新闻</div></li>
+</ul>
+            </xmp>
+            <h4>js:</h4>
+            <xmp>
+// 1: 初始化tab
+
+var tab = bui.slide({
+  id:"#tabNews",
+  menu:"#tabNav",
+  children:".bui-tab-main > ul",
+  scroll: true
+  // 2: 声明是动态加载的tab
+  autoload: true,
+})      
+
+// 3: 监听加载后的事件
+tab.on("load",function (res) {
+    console.log($(this).index())
+})
+
+            </xmp>  
+            
+        </div>
+    </div>
+</div>

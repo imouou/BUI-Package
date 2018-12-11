@@ -1,0 +1,58 @@
+﻿
+<style>
+	.moving {
+		width: 100px;
+		height: 100px;
+		line-height: 100px;
+		background: #ff3330;
+		color: #fff;
+		text-align: center;
+		z-index: 10;
+		margin: 0 auto;
+		position:absolute;
+		left:50%;
+		top:50%;
+		margin-left: -50px;
+		margin-top: -50px;
+	}
+</style>
+<div class="bui-page">
+	<header id="bar" class="bui-bar">
+		<div class="bui-bar-left">
+			<a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+		</div>
+		<div class="bui-bar-main">动画控制器</div>
+		<div class="bui-bar-right">
+		</div>
+	</header>
+	<main>
+		<div id="animate" class="moving">
+			移动的元素
+		</div>
+		<div class="bui-box">
+			<div class="span1"><div id="left" class="bui-btn">左移</div></div>
+			<div class="span1"><div id="right" class="bui-btn">右移</div></div>
+			<div class="span1"><div id="up" class="bui-btn">上移</div></div>
+			<div class="span1"><div id="down" class="bui-btn">下移</div></div>
+		</div>
+		<div class="bui-box">
+			<div class="span1"><div id="scaleBigger" class="bui-btn">放大</div></div>
+			<div class="span1"><div id="scaleSmaller" class="bui-btn">缩小</div></div>
+			<div class="span1"><div id="rotate" class="bui-btn">旋转</div></div>
+			<div class="span1"><div id="skew" class="bui-btn">扭曲</div></div>
+		</div>
+		<div class="bui-box">
+			<div class="span1"><div id="continuous" class="bui-btn">同时动画</div></div>
+			<div class="span1"><div id="join" class="bui-btn">连续动画</div></div>
+		</div>
+		<div class="bui-box">
+			<div class="span1"><div id="reverse" class="bui-btn">连续+返回动画</div></div>
+			<div class="span1"><div id="clear" class="bui-btn">清除动画记录</div></div>
+		</div>
+		<div class="bui-box">
+			<div class="span1"><div id="stop" class="bui-btn">还原动画</div></div>
+		</div>
+	</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!-- 这里还是一个标准的BUI页面 -->
+<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn btn-back"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">局部加载-router.loadPart</div>
+        <div class="bui-bar-right"></div>
+    </header>
+    <main>
+        <div class="container-xy">
+            <p>用法: router.loadPart(obj); 或者 bui.loadPart(obj)</p>
+        </div>
+        <table class="bui-table">
+            <tr>
+                <th>字段名</th>
+                <th>类型</th>
+                <th>必须</th>
+            </tr>
+            <tr>
+                <td>obj</td>
+                <td>object</td>
+                <th>&nbsp;</th>
+            </tr>
+            <tr>
+                <td>obj.id</td>
+                <td>string</td>
+                <th>是</th>
+            </tr>
+            <tr>
+                <td>obj.url</td>
+                <td>string</td>
+                <th>是</th>
+            </tr>
+            <tr>
+                <td>obj.param</td>
+                <td>object</td>
+                <th>否</th>
+            </tr>
+        </table>
+        <h3 class="section-title">局部加载</h3>
+        <div class="bui-panel">
+            <div class="bui-panel-head">示例:</div>
+            <div class="bui-panel-main">
+                <div class="container">
+                    <xmp>
+// 局部加载
+router.loadPart({ id:"#slide",url: "pages/page2/page2.html " });
+                    </xmp>
+                    <strong class="danger-reverse">注意:</strong>#slide为当前页面的某个DIV元素, 局部加载不记录在历史记录
+                </div>
+            </div>
+        </div>
+        <div id="loadPart"></div>
+    </main>
+    <footer>
+        <div class="container-xy">
+            <div id="btnLoadPart" class="bui-btn primary round">局部加载成功以后执行</div>
+        </div>
+    </footer>
+</div>

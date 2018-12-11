@@ -1,0 +1,38 @@
+﻿
+<!-- 侧滑栏的父层, -->
+<div id="sidebarDoubleWrap" class="bui-sidebar-wrap">
+	<!-- 左边侧滑菜单 -->
+	<div class="bui-sidebar swiperight">
+		<img src="images/placeholder-sidebar.jpg" alt="占位图">
+	</div>
+	<!-- 右边侧滑菜单 -->
+	<div class="bui-sidebar swipeleft">
+		<img src="images/placeholder-filter.jpg" alt="占位图">
+	</div>
+	<!-- 正文内容 -->
+	<div class="bui-page">
+		<header class="bui-bar">
+			<div class="bui-bar-left">
+				<a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+			</div>
+			<div class="bui-bar-main">两侧菜单</div>
+			<div class="bui-bar-right">
+			</div>
+		</header>
+		<main>
+			<div class="bui-box">
+				<div id="menu1" class="menu"><i class="icon-menu"></i></div>
+				<div class="span1"></div>
+				<div id="menu2" class="menu"><i class="icon-filter"></i></div>
+			</div>
+			<div class="placeholder">
+				<img src="images/swipeleft-right.png" alt="左右滑动">
+				<div class="placeholder-text">
+					<h3>右滑打开左侧菜单</h3>
+					<h3>左滑打开右侧菜单</h3>
+					<p class="warning-reverse">(提示：该事件请在手机操作！)</p>
+				</div>
+			</div>
+		</main>
+	</div>
+</div>

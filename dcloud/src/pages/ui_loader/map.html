@@ -1,0 +1,106 @@
+
+    <div class="bui-page">
+        <header class="bui-bar">
+            <div class="bui-bar-left">
+                <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+            </div>
+            <div class="bui-bar-main">loader.map</div>
+            <div class="bui-bar-right"></div>
+        </header>
+        <main>
+            <!-- 模块用法 -->
+            <h3 class="section-title">模块默认已经初始化给 window.loader </h3>
+
+            <div class="container-xy">
+                <p>用法: loader.map(obj); </p>
+                
+            </div>
+            <table class="bui-table">
+                <tr>
+                    <th>字段名</th>
+                    <th>类型</th>
+                    <th>必须</th>
+                </tr>
+                <tr>
+                    <td>obj</td>
+                    <td>object</td>
+                    <td>是</td>
+                </tr>
+                <tr>
+                    <td>obj.moduleName</td>
+                    <td>string</td>
+                    <td>是</td>
+                </tr>
+                <tr>
+                    <td>obj.script</td>
+                    <td>string</td>
+                    <td>是</td>
+                </tr>
+                <tr>
+                    <td>obj.template</td>
+                    <td>string</td>
+                    <td>否</td>
+                </tr>
+                <tr>
+                    <td>obj.callback</td>
+                    <td>function</td>
+                    <td>否</td>
+                </tr>
+            </table>
+            <div class="container-xy">更多字段,请查看API bui.loader</div>
+            <div class="bui-panel">
+                <div class="bui-panel-head">用法1: 配置一个模块 </div>
+                <div class="bui-panel-main">
+                    <div class="container">
+                        js: 
+                <xmp>
+
+// 定义一个指定模块 page2 
+
+loader.map({
+    moduleName: "page2",
+    script: "pages/page2/page2.js"
+})
+
+// 在page2.js 
+
+loader.define("page2",function(){
+    
+})
+
+                </xmp>
+
+                    </div>
+                </div>
+            </div>
+            <div class="bui-panel">
+                <div class="bui-panel-head">用法2: 配置多个模块 </div>
+                <div class="bui-panel-main">
+                    <div class="container">
+                        js: 
+                <xmp>
+
+
+loader.map({
+    modules: {
+        page2: {
+            moduleName: "page2",
+            script: "pages/page2/page2.js"
+        },
+        page3: {
+            moduleName: "page3",
+            callback: function(){
+
+            }
+        }
+    }
+    
+})
+
+
+                </xmp>
+                    <p><strong class="danger-reverse">注意:</strong>如果定义了callback,则不需要指定script 地址,可以直接加载page3模块</p>
+                </div>
+            </div>
+        </main>
+    </div>

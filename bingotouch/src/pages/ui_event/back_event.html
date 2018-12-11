@@ -1,0 +1,39 @@
+﻿
+<div class="bui-page">
+	<header class="bui-bar">
+		<div class="bui-bar-left">
+			<a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+		</div>
+		<div class="bui-bar-main">安卓后退事件监听</div>
+		<div class="bui-bar-right">
+		</div>
+	</header>
+	<main>
+		<div class="bui-panel">
+			<div class="bui-panel-head">示例:</div>
+			<div class="bui-panel-main">
+				<div class="container">
+			 		<h4>js:</h4>
+					<xmp>
+// 监听后退事件
+var flag = 0;
+document.addEventListener("backbutton", function() {
+
+if (flag == 0) {
+ bui.hint("再按一次就退出应用了!");
+    flag = flag + 1;
+     //5s后重新设置回去
+     setTimeout(function() {
+      flag = 0;
+     }, 5000);
+} else if (flag == 1) {
+    app.exit();
+}
+}, false);
+			 		</xmp>
+					
+				</div>
+			</div>
+		</div>
+	</main>
+</div>

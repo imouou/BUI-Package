@@ -1,0 +1,31 @@
+<style>
+.container-full {
+    background: red;
+}
+</style>
+<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">页面标题</div>
+        <div class="bui-bar-right">
+            <!-- 右边按钮 -->
+        </div>
+    </header>
+    <!-- 选项卡 html 对应的结构: 分别替换main,footer标签, 如果main有其它内容,则复制bui-tab的结构-->
+    <main>
+        <!-- 上拉菜单 html 对应的结构: -->
+        <div id="btnOpen" class="bui-btn">打开下拉菜单</div>
+    </main>
+    <footer>
+        <ul id="tabDynamicNav" class="bui-nav">
+            <li class="bui-btn bui-box-vertical active" href="pages/main/home.html"><i class="icon-home"><span class="bui-badges">5</span></i>
+                <div class="span1">Tab1</div>
+            </li>
+            <li class="bui-btn bui-box-vertical" href="pages/main/news.html"><i class="icon-edit"></i>
+                <div class="span1">Tab2</div>
+            </li>
+        </ul>
+    </footer>
+</div>

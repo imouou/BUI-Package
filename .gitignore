@@ -1,0 +1,5 @@
+node_modules/**
+apicloud/dist/**
+bingotouch/dist/**
+dcloud/dist/**
+appcan/dist/**

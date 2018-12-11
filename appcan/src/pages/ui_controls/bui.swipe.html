@@ -1,0 +1,45 @@
+<style>
+    /*示例样式*/
+    .wrap .swipeleft img, 
+    .wrap .swiperight img{
+        width: 100%;
+    } 
+    .swipeleft {
+        background: #fff;
+    }
+    .swipeleft img {
+        position: absolute;
+        bottom: 0;
+    }
+
+</style>
+<div id="uiSwipe" class="wrap">
+    <!-- 侧滑菜单 -->
+    <div class="swipeleft" data-moving="640">
+        <img src="images/placeholder-filter.jpg" alt="占位图">
+    </div>
+    <div class="swiperight" data-moving="644">
+        <img src="images/placeholder-sidebar.jpg" alt="占位图">
+    </div>
+    <div class="bui-page" style="background:#ff3300;">
+        <header class="bui-bar">
+            <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+            </div>
+            <div class="bui-bar-main">swipe抽屉菜单</div>
+            <div class="bui-bar-right">
+            </div>
+        </header>
+        <main>
+            <div class="placeholder">
+                <img src="images/swipeleft-right.png" alt="左右滑动">
+                <div class="placeholder-text">
+                    <h3>右滑打开左侧菜单</h3>
+                    <h3>左滑打开右侧菜单</h3>
+                    <p class="warning-reverse">(提示：该事件请在手机操作！)</p>
+                </div>
+            </div>
+        </main>
+        
+    </div>
+</div>

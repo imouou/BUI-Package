@@ -1,0 +1,62 @@
+
+    <div class="bui-page">
+        <header class="bui-bar">
+            <div class="bui-bar-left">
+                <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+            </div>
+            <div class="bui-bar-main">loader.import</div>
+            <div class="bui-bar-right"></div>
+        </header>
+        <main>
+            <!-- 模块用法 -->
+            <h3 class="section-title">模块默认已经初始化给 window.loader </h3>
+
+            <div class="container-xy">
+                <p>用法: loader.import(src,callback); </p>
+                
+            </div>
+            <table class="bui-table">
+                <tr>
+                    <th>字段名</th>
+                    <th>类型</th>
+                    <th>必须</th>
+                </tr>
+                <tr>
+                    <td>src</td>
+                    <td>string | array</td>
+                    <td>是</td>
+                </tr>
+                <tr>
+                    <td>callback</td>
+                    <td>function</td>
+                    <td>否</td>
+                </tr>
+            </table>
+            <div class="bui-panel">
+                <div class="bui-panel-head">用法1:动态加载脚本: </div>
+                <div class="bui-panel-main">
+                    <div class="container">
+                        js: 
+                <xmp>
+loader.import("main.js",function(src){
+  // 创建成功以后执行回调
+});
+                </xmp>
+                    </div>
+                </div>
+            </div>
+            <div class="bui-panel">
+                <div class="bui-panel-head">用法2:动态加载样式: </div>
+                <div class="bui-panel-main">
+                    <div class="container">
+                        js: 
+                <xmp>
+loader.import("main.css",function(src){
+  // 创建成功以后执行回调
+});
+                </xmp>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>

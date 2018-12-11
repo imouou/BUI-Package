@@ -1,0 +1,105 @@
+﻿
+<style>
+	#tabSideNav {
+		width:3rem;
+	}
+	#tabSide {
+		margin-left: 3rem;
+    background: #fff;
+	}
+</style>
+<div class="bui-page">
+	<header class="bui-bar">
+		<div class="bui-bar-left">
+			<a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+		</div>
+		<div class="bui-bar-main">
+			tab侧边
+		</div>
+		<div class="bui-bar-right">
+		</div>
+	</header>
+	<main>
+		<ul id="tabSideNav" class="bui-list bui-tab-sidenav">
+			<li class="bui-btn active">首页</li>
+			<li class="bui-btn ">新闻</li>
+		</ul>
+		<div id="tabSide" class="bui-tab">
+			<div class="bui-tab-main">
+				<ul>
+					<li>
+						<div class="bui-panel" style="margin-top:0;">
+							<div class="bui-panel-head">示例:</div>
+							<div class="bui-panel-main">
+								<div class="container">
+									<h4>html:</h4>
+									<xmp>
+<div id="tabNews" class="bui-tab">
+  <div class="bui-tab-main">
+    <ul>
+      <li>
+        滑动的内容
+      </li>
+      <li>
+        滑动的内容
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- 菜单在外层 要用id -->
+<ul id="tabNav" class="bui-list" style="width:2rem;">
+  <li class="bui-btn active">
+  TAB1
+  </li>
+  <li class="bui-btn">
+  TAB2
+  </li>
+</ul>
+								    </xmp>
+									<h4>css:</h4>
+									<xmp>
+#tabNav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 10;
+}
+#tabNews {
+  margin-left: 2rem;
+}	
+									</xmp>	
+									<h4>js:</h4>
+									<xmp>
+// viewport 来源于 ready的回调
+var tabWidth = viewport.width() - $("#tabNav").width();
+
+//按钮在tab外层,需要传id
+var tab = bui.slide({
+  id:"#tabNews",
+  menu:"#tabNav",
+  children:".bui-tab-main > ul",
+  width: tabWidth,
+  scroll: true,
+  animate: false,
+  delay: true
+})		
+									</xmp>	
+									
+								</div>
+							</div>
+						</div>
+
+					</li>
+					<li>
+						第2个tab
+					</li>
+				</ul>
+		
+			</div>
+		</div>
+		
+	</main>
+</div>

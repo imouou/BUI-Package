@@ -1,0 +1,91 @@
+﻿<div class="bui-page">
+	<header class="bui-bar">
+		<div class="bui-bar-left">
+			<a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+		</div>
+		<div class="bui-bar-main">侧滑菜单</div>
+		<div class="bui-bar-right">
+		</div>
+	</header>
+	<main>
+
+		<div class="section-title">侧滑菜单在右边</div>
+
+		<ul id="listviewDialog" class="bui-listview ">
+			<li>
+				<div class="bui-btn bui-box" href="pages/ui_controls/bui.listview.html" param='{"id":"123"}'>
+					<div class="span1">动态渲染-左滑动出现菜单</div>
+					<i class="icon-listright"></i>
+				</div>
+			</li>
+			<li>
+				<div class="bui-btn bui-box" href="pages/ui_controls/bui.listview.html" param='{"id":"123"}'>
+					<div class="span1">动态渲染-左滑动出现菜单</div>
+					<i class="icon-listright"></i>
+				</div>
+			</li>
+			<!-- 设置status属性可以避免渲染菜单 -->
+			<li status="1">
+				<div class="bui-btn bui-box">
+					<div class="span1">不渲染</div>
+					<i class="icon-listright"></i>
+				</div>
+			</li>
+			<!-- 设置status属性可以避免渲染菜单 -->
+			<li status="1">
+				<div class="bui-btn bui-box" href="pages/ui_controls/bui.listview.html" param='{"id":"123"}'>
+					<div class="span1">静态渲染-左右菜单</div>
+					<span class="bui-badges">荐</span>
+					<i class="icon-listright"></i>
+				</div>
+				<div class="bui-listview-menu swipeleft" data-moving="240">
+                    <div class="bui-btn primary">置顶</div>
+                    <div class="bui-btn primary">修改</div>
+                    <div class="bui-btn danger">删除</div>
+                </div>
+				<div class="bui-listview-menu swiperight">
+                    <div class="bui-btn primary">修改</div>
+                    <div class="bui-btn danger">删除</div>
+                </div>
+			</li>
+		</ul>
+		<div class="bui-panel">
+			<div class="bui-panel-head"><strong>示例:</strong></div>
+			<div class="bui-panel-main">
+				<div class="container">
+					<h4>html:</h4>
+					<xmp>
+// 注意: listview 的结构跟list 是不一样的
+<ul id="listview" class="bui-listview">
+  <li>
+    <div class="bui-btn bui-box">
+      <div class="span1">左滑动出现菜单</div>
+      <i class="icon-listright"></i>
+    </div>
+  </li>
+</ul>
+				 	</xmp>
+					<h4>js:</h4>
+					<xmp>
+var listView = bui.listview({
+	id: "#listview",
+	data: [{ 
+		"text": "修改", 
+		"classname":"primary"
+	},{ "text": "删除", 
+		"classname":"danger"
+	}],
+	callback: function (e,menu) {
+		//关闭菜单
+		menu.close();
+	}
+});
+				 	</xmp>
+			 	</div>
+			</div>
+		</div>
+	</main>
+</div>
+	
+</body>
+</html>

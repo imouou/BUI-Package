@@ -1,0 +1,76 @@
+<style>
+    /*示例样式*/
+    
+    .wrap .swipedown img,
+    .wrap .swipeup img .wrap .swipeleft img,
+    .wrap .swiperight img {
+        width: 100%;
+    }
+    
+    .wrap .bui-page main {
+        background: #fff;
+    }
+    
+    .placeholder {
+        padding-top: 1rem;
+        margin: 0;
+        text-align: center;
+    }
+    
+    .placeholder img {
+        width: 1.4rem;
+        margin: 0 auto .3rem auto;
+    }
+    
+    .placeholder-text {
+        width: 5.6rem;
+        margin: 0 auto;
+        border: 1px dashed #70B1E9;
+        background: #ECF9FF;
+        border-radius: .3rem;
+        padding: .3rem;
+    }
+    
+    .placeholder-text h3 {
+        color: #333;
+        font-size: .4rem;
+        margin-bottom: .2rem;
+    }
+    
+    .message {
+        height: 100%;
+    }
+</style>
+<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">上下抽屉菜单</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+        <div id="uiSwipeDown" class="wrap">
+            <!-- 下滑菜单 -->
+            <div class="swipedown" data-moving="325">
+                <img src="images/placeholder-app.jpg" alt="占位图">
+            </div>
+            <!-- 上滑键盘 -->
+            <div class="swipeup" data-moving="516">
+                <img src="images/placeholder-keyboard.jpg" alt="占位图">
+            </div>
+            <div class="message">
+                <div class="placeholder">
+                    <img src="images/swipeup-down.png" alt="上下滑动">
+                    <div class="placeholder-text">
+                        <h3>下滑打开头部菜单</h3>
+                        <h3>上滑打开底部菜单</h3>
+                        <p class="warning-reverse">(提示：该事件请在手机操作！)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</div>

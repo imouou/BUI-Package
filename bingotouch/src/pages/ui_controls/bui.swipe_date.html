@@ -1,0 +1,43 @@
+
+    <style>
+
+        #uiSwipeDown {
+            height:100%;
+        }
+        #uiSwipeDown .swipedown {
+            /*让滑动的目标显示*/
+            -webkit-transform: translate(0,0);
+            transform: translate(0,0);
+            z-index: 0;
+        }
+        .todo {
+            z-index: 10;
+            height: 100%;
+            background: #fff;
+            /* 参数 initDistance:200; */
+            -webkit-transform: translate(0,2rem);
+            transform: translate(0,2rem);
+        }
+    </style>
+    <div class="bui-page" style="background:#ff3300;">
+        <header class="bui-bar">
+            <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+            </div>
+            <div class="bui-bar-main">日历模拟</div>
+            <div class="bui-bar-right">
+            </div>
+        </header>
+        <main>
+            <div id="uiSwipeDown" class="wrap">
+                <!-- 侧滑菜单 -->
+                <div class="swipedown">
+                    <img src="images/date.jpg" alt="占位图">
+                </div>
+                <!-- 中间内容 -->
+                <div class="todo">
+                   <img src="images/placeholder-page.png" alt="占位图">
+                </div>
+            </div>
+        </main>
+    </div>

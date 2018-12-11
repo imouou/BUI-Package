@@ -1,0 +1,19 @@
+<!-- 这里还是一个标准的BUI页面 -->
+<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="window.history.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">BUI+artTemplate模板</div>
+        <div class="bui-bar-right"></div>
+    </header>
+    <main>
+        <ul id="listArt"></ul>
+    </main>
+</div>
+
+<script id="tpl-list" type="text/html">
+{{each listData as item index}} 
+    <li class="bui-btn">{{item.name}}</li>
+{{/each}} 
+</script>

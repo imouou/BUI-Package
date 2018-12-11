@@ -1,0 +1,107 @@
+﻿
+<style>
+    .bui-list .bui-btn i {
+        font-size: 0.4rem;
+        margin-right: 0.2rem;
+    }
+</style>
+<div class="bui-page">
+	<header class="bui-bar">
+		<div class="bui-bar-left">
+			<a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+		</div>
+		<div class="bui-bar-main">list</div>
+		<div class="bui-bar-right">
+		</div>
+	</header>
+	<main>
+		<div id="scroll" class="bui-scroll">
+			<div class="bui-scroll-head"></div>
+			<div class="bui-scroll-main">
+				<ul id="list" class="bui-listview">
+                    <li v-for="item in datas" status="1" style="height:50px;" >
+                        <div class="bui-btn"><i class="icon-facefill"></i>{{item.name}}</div>
+                        <div class="bui-listview-menu swipeleft">
+                            <div class="bui-btn primary">修改</div>
+                            <div class="bui-btn danger">删除</div>
+                        </div>
+                    </li>
+				</ul>
+			</div>
+			<div class="bui-scroll-foot"></div>
+		</div>
+        <div class="bui-panel">
+            <div class="bui-panel-head"><strong>示例:</strong></div>
+            <div class="bui-panel-main">
+                <div class="container">
+                <h4>html:</h4>
+                <xmp>
+<div id="scroll" class="bui-scroll">
+  <div class="bui-scroll-head"></div>
+  <div class="bui-scroll-main">
+    <ul id="list" class="bui-listview">
+        <li v-for="item in datas" status="1" style="height:36px;" >
+            <div class="bui-btn"><i class="icon-facefill"></i>{{item.name}}</div>
+            <div class="bui-listview-menu swipeleft">
+                <div class="bui-btn primary">修改</div>
+                <div class="bui-btn danger">删除</div>
+            </div>
+        </li>
+    </ul>
+  </div>
+  <div class="bui-scroll-foot"></div>
+</div>
+                </xmp>
+                <h4>js:</h4>
+                <xmp>
+bui.ready(function () {
+        
+    // 绑定list的数据
+    var listApp = new Vue({
+      el: '#list',
+      data: {
+        datas: []
+      }
+    });
+
+    var uiList = bui.list({
+        id: "#scroll",
+        url: siteDir + "userlist.json",
+        page:1,
+        pageSize:5,
+        height:300,
+        //如果分页的字段名不一样,通过field重新定义
+        field: {
+            page: "page",
+            size: "pageSize",
+            data: "data"
+        },
+        onRefresh: function (scroll,data) {
+            //刷新的时候执行
+            listApp.datas = data;
+            
+        },
+        onLoad: function (scroll,data) {
+            // 这里通过vue 设置的数据,会偏慢一点,导致页面高度不足,直接请求了2页数据再进行渲染
+            console.log( this.option("page") );
+            listApp.datas = listApp.datas.concat(data);
+        },
+        callback: function (e) {
+            // 点击整行的时候执行
+        }
+    });
+
+})
+
+//生成模板 跟 artTemplate 重名
+function template2 (data) {
+
+    var html = template('test', {"data":data});
+    return html;
+}
+                </xmp>
+                </div>
+            </div>
+        </div>
+	</main>
+</div>

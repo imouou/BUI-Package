@@ -1,0 +1,44 @@
+﻿
+<div class="bui-page">
+	<header class="bui-bar">
+		<div class="bui-bar-left">
+			<a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+		</div>
+		<div class="bui-bar-main">页面事件的绑定</div>
+		<div class="bui-bar-right">
+		</div>
+	</header>
+	<main>
+        <div class="container-xy">提示: 打开谷歌调试面板,可以看到事件初始化的顺序, PC pageready 比 onload 快, 手机是 onload 比 pageready 快, 要监听原生事件的调用, 只能在 pageready 监听. </div>
+        <div class="container-xy">单页路由下,全局事件的监听需要在路由初始化的时候监听,其它地方监听不到</div>
+
+		<div class="bui-panel">
+			<div class="bui-panel-head">示例:</div>
+			<div class="bui-panel-main">
+				<div class="container">
+			 		<h4>js:</h4>
+					<xmp>
+// dom ready 但 bui 还未初始化
+bui.on("pagebefore",function (argument) {
+    console.log("pagebefore")
+})
+// dom ready 且 bui 已经初始化
+bui.on("pageinit",function (argument) {
+    console.log("pageinit")
+})
+// 图片及脚本只有已经初始化
+bui.on("onload",function (argument) {
+    console.log("onload")
+})
+// dom 及 原生接口已经初始化
+bui.on("pageready",function (argument) {
+    console.log("pageready")
+})
+			 		</xmp>
+					
+				</div>
+			</div>
+		</div>
+	</main>
+</div>
+	

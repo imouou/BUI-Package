@@ -1,0 +1,38 @@
+﻿
+<style>
+/*示例样式*/
+	.img {
+		width:100%;
+		height:100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	#dialog3 .bui-box-center{
+		background: #333;
+	}
+</style>
+<div class="bui-page">
+	<header class="bui-bar">
+		<div class="bui-bar-left">
+			<a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+		</div>
+		<div class="bui-bar-main">全屏预览图片</div>
+		<div class="bui-bar-right">
+		</div>
+	</header>
+	<main>
+		<div id="btnOpen" class="bui-btn"><img src="images/slideshow.png" alt=""></div>
+
+
+	</main>
+</div>
+	
+<!-- 隐藏的弹出窗口	 -->
+<div id="dialog3" class="bui-dialog">
+	<div class="bui-box-center" style="height:100%;">
+		<div class ="img" style="background-image: url('images/slideshow.png') ;"></div>
+	</div>
+	<div class="bui-dialog-close"><i class="icon-close"></i></div>
+</div>

@@ -1,0 +1,57 @@
+<!-- 这里还是一个标准的BUI页面 -->
+<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn btn-back"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">替换当前页面-router.replace</div>
+        <div class="bui-bar-right"></div>
+    </header>
+    <main>
+        <div class="container-xy">
+            <p>用法: router.replace(obj);</p>
+            <p>**注意** 如果要保持跟多页方式一致,则使用 bui.load({url:"",replace:true}) </p>
+        </div>
+        <table class="bui-table">
+            <tr>
+                <th>字段名</th>
+                <th>类型</th>
+                <th>必须</th>
+            </tr>
+            <tr>
+                <td>obj</td>
+                <td>object</td>
+                <td>是</td>
+            </tr>
+            <tr>
+                <td>obj.url</td>
+                <td>string</td>
+                <td>是</td>
+            </tr>
+            <tr>
+                <td>obj.param</td>
+                <td>object</td>
+                <td>否</td>
+            </tr>
+        </table>
+        <h3 class="section-title">替换当前页面</h3>
+        <div class="bui-panel">
+            <div class="bui-panel-head">示例:</div>
+            <div class="bui-panel-main">
+                <div class="container">
+                    <xmp>
+// 页面替换
+router.replace({ url: "pages/page2/page2.html " });
+                    </xmp>
+                    <strong class="danger-reverse">注意:</strong>单页的替换不会保存到历史记录,也就你后退其实是后退了2层 
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container-xy">
+            <div id="replace" class="bui-btn primary round">替换为首页</div>
+        </div>
+    </footer>
+</div>

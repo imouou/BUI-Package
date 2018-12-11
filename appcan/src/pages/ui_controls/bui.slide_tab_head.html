@@ -1,0 +1,79 @@
+﻿
+<div class="bui-page">
+	<header class="bui-bar">
+		<div class="bui-bar-left">
+			<a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+		</div>
+		<div class="bui-bar-main">
+			<ul id="tabHeadNav" class="bui-nav" style="width: 60%;">
+				<li class="bui-btn active">首页</li>
+				<li class="bui-btn ">新闻</li>
+			</ul>
+		</div>
+		<div class="bui-bar-right">
+		</div>
+	</header>
+	<main>
+		<div id="tabHead" class="bui-tab">
+			<div class="bui-tab-main">
+				<ul>
+					<li>
+                        
+                        <div class="container-xy">
+                            小提示: 该例子可以在手机中拖动
+                        </div>  
+						<div class="bui-panel" style="margin-top:0;">
+							<div class="bui-panel-head">示例:</div>
+							<div class="bui-panel-main">
+								<div class="container">
+									<h4>html:</h4>
+									<xmp>
+<div id="tabNews" class="bui-tab">
+  <div class="bui-tab-main">
+    <ul>
+      <li>
+        滑动的内容
+      </li>
+      <li>
+        滑动的内容
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- 菜单在外层 要用id -->
+<ul id="tabNav" class="bui-nav">
+  <li class="bui-btn active">
+  TAB1
+  </li>
+  <li class="bui-btn">
+  TAB2
+  </li>
+</ul>
+								    </xmp>
+									<h4>js:</h4>
+									<xmp>
+var tab = bui.slide({
+    id:"#tabNews",
+    menu:"#tabNav",
+    children:".bui-tab-main > ul",
+	scroll: true
+    
+})		
+									</xmp>	
+									
+								</div>
+							</div>
+						</div>
+
+					</li>
+					<li>
+						新闻TAB
+					</li>
+				</ul>
+		
+			</div>
+		</div>
+		
+	</main>
+</div>

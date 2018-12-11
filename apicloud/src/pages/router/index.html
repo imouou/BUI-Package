@@ -1,0 +1,97 @@
+<!-- 这里还是一个标准的BUI页面 -->
+<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn btn-back"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">BUI单页路由</div>
+        <div class="bui-bar-right"></div>
+    </header>
+    <main>
+        
+        <div class="bui-panel">
+            <div class="bui-panel-head">单页路由详细说明</div>
+            <div class="bui-panel-main">
+                <div class="container">
+                    <ul class="bui-list">
+                        <li>1. 路由初始化以后,第一次打开首页,便会加载 main 模块, 每个模块需要通过loader.define定义</li>
+                        <li>2. 默认main是在pages/main/目录下, 一个main模块,包含 main.html(模板), main.js (业务逻辑)</li>
+                        <li>3. 一个js只能用loader.define定义一个匿名模块,后面的会覆盖前面的,具体使用请查看API </li>
+                        <li>4. 页面跳转刷新返回传参等,推荐保持跟多页的开发方式保持一致.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <h3 class="section-title">页面跳转及传参</h3>
+        <ul class="bui-list">
+            <li class="bui-btn bui-box" href="pages/router/load/load.html">
+                <div class="span1">跳转页面+传参</div>
+                <i class="icon-listright"></i>
+            </li>
+            <li class="bui-btn bui-box" href="pages/router/getPageParams/getPageParams.html" param='{"page":"main"}'>
+                <div class="span1">接收传参</div>
+                <i class="icon-listright"></i>
+            </li>
+            <li class="bui-btn bui-box" href="pages/router/refresh/refresh.html">
+                <div class="span1">刷新页面</div>
+                <i class="icon-listright"></i>
+            </li>
+            <li class="bui-btn bui-box" href="pages/router/replace/replace.html">
+                <div class="span1">替换页面</div>
+                <i class="icon-listright"></i>
+            </li>
+            <li class="bui-btn bui-box" href="pages/router/back/back.html">
+                <div class="span1">后退及刷新页面</div>
+                <span id="badges" class="bui-badges">9</span>
+                <i class="icon-listright"></i>
+            </li>
+            <li class="bui-btn bui-box" href="pages/router/loadPart/loadPart.html">
+                <div class="span1">局部加载</div>
+                <i class="icon-listright"></i>
+            </li>
+            <li class="bui-btn bui-box" href="pages/router/preload/preload.html">
+                <div class="span1">预加载</div>
+                <i class="icon-listright"></i>
+            </li>
+            <li class="bui-btn bui-box" href="pages/router/option/option.html">
+                <div class="span1">常用切换效果</div>
+                <i class="icon-listright"></i>
+            </li>
+            <li class="bui-btn bui-box" href="pages/router/event/event.html">
+                <div class="span1">路由全局事件</div>
+                <i class="icon-listright"></i>
+            </li>
+            <li class="bui-btn bui-box btn-iframe">
+                <div class="span1">加载外部地址</div>
+                <i class="icon-listright"></i>
+            </li>
+        </ul>
+        <h3 class="section-title">第三方配合</h3>
+        <ul class="bui-list">
+            <li class="bui-btn bui-box" href="pages/router/artTemplate/artTemplate.html">
+                <div class="span1">使用artTemplate模板</div>
+                <i class="icon-listright"></i>
+            </li>
+            <li class="bui-btn bui-box" href="pages/router/map/map.html">
+                <div class="span1">使用高德地图</div>
+                <i class="icon-listright"></i>
+            </li>
+            <li class="bui-btn bui-box" href="pages/router/chart/chart.html">
+                <div class="span1">使用图表渲染</div>
+                <i class="icon-listright"></i>
+            </li>
+            <li class="bui-btn bui-box" href="pages/router/vuejs/vuejs.html">
+                <div class="span1">使用vuejs+bui.list</div>
+                <i class="icon-listright"></i>
+            </li>
+            <li class="bui-btn bui-box" href="pages/router/vuejs/vuejs_slide.html">
+                <div class="span1">使用vuejs+bui.slide</div>
+                <i class="icon-listright"></i>
+            </li>
+            <li class="bui-btn bui-box" href="pages/router/react/react.html">
+                <div class="span1">使用react</div>
+                <i class="icon-listright"></i>
+            </li>
+        </ul>
+    </main>
+</div>

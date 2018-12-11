@@ -1,0 +1,92 @@
+﻿
+<style>
+
+    #uiSwipeDate {
+        height:100%;
+    }
+    #uiSwipeDate .swipedown {
+        /*让滑动的目标显示*/
+        -webkit-transform: translate(0,0);
+        transform: translate(0,0);
+        z-index: 0;
+    }
+    .todo {
+        z-index: 10;
+        height: 100%;
+        background: #fff;
+        /* 参数 initDistance:150; */
+        -webkit-transform: translate(0,2rem);
+        transform: translate(0,2rem);
+    }
+</style>
+<div class="bui-page">
+	<header class="bui-bar">
+		<div class="bui-bar-left">
+			<a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+		</div>
+		<div class="bui-bar-main">
+			<ul id="tabNav" class="bui-nav" style="width: 60%;">
+				<li class="bui-btn active">日历</li>
+				<li class="bui-btn ">任务</li>
+			</ul>
+		</div>
+		<div class="bui-bar-right">
+		</div>
+	</header>
+	<main>
+		<div id="tabNews" class="bui-tab">
+			<div class="bui-tab-main">
+				<ul>
+					<li>
+						<div id="uiSwipeDate" class="wrap">
+                            <!-- 侧滑菜单 -->
+                            <div class="swipedown">
+                                <div id="uiSlide" class="bui-slide">
+                                  <div class="bui-slide-main">
+                                    <ul>
+                                      <!-- 有多少个li则有多少个滑动 -->
+                                      <li>
+                                        <img src="images/date.jpg" alt="占位图">
+                                      </li>
+                                      <li>
+                                        <img src="images/date.jpg" alt="占位图">
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>  
+                            </div>
+                            <!-- 侧滑菜单 -->
+                            <div class="todo" >
+                                
+                                <div class="container-xy">
+                                    小提示: 该例子可以在手机中拖动
+                                </div>  
+                                <ul id="listview" class="bui-listview ">
+                                    <li>
+                                        <div class="bui-btn bui-box" href="bui.listview.html" param='{"id":"123"}'>
+                                            <div class="span1">静态渲染-左右菜单</div>
+                                            <i class="icon-listright"></i>
+                                        </div>
+                                    </li>
+                                    <!-- 设置status属性可以避免渲染菜单 -->
+                                    <li>
+                                        <div class="bui-btn bui-box" href="bui.listview.html" param='{"id":"123"}'>
+                                            <div class="span1">静态渲染-左右菜单</div>
+                                            <i class="icon-listright"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+					</li>
+					<li>
+						第2个tab
+					</li>
+				</ul>
+		
+			</div>
+		</div>
+		
+	</main>
+</div>

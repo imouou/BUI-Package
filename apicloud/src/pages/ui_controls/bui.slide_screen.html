@@ -1,0 +1,75 @@
+﻿
+<div class="bui-page">
+	<header class="bui-bar">
+		<div class="bui-bar-left">
+			<a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+		</div>
+		<div class="bui-bar-main">焦点图切换</div>
+		<div class="bui-bar-right">
+		</div>
+	</header>
+	<main>
+		<div id="slideScreen" class="bui-slide">
+			<div class="bui-slide-main">
+				<ul>
+					<li>
+						<div style="background: yellow;width:100%;height: 100%;overflow-y:auto;">
+
+                        </div>
+						<!-- <div class="bui-slide-title">我是图片标题1</div> -->
+					</li>
+					<li><div style="background: orange;width:100%;height: 100%;"></div>
+						<!-- <div class="bui-slide-title">我是图片标题2</div> -->
+					</li>
+					<li><div style="background: red;width:100%;height: 100%;"></div>
+						<!-- <div class="bui-slide-title">我是图片标题3</div> -->
+					</li>
+				</ul>
+			</div>
+			<div class="bui-slide-head">
+				<ul >
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="bui-panel">
+			<div class="bui-panel-head">示例:</div>
+			<div class="bui-panel-main">
+				<div class="container">
+					<h4>html:</h4>
+						
+					<xmp>
+<div id="slide" class="bui-slide">
+  <div class="bui-slide-main">
+    <ul>
+      <li>
+        <div style="background: yellow;width:100%;height: 100%;"></div>
+        <div class="bui-slide-title">
+          标题
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="bui-slide-head">
+    <ul>
+      <li>1</li>
+    </ul>
+  </div>
+</div>				
+					</xmp>	
+					<h4>js:</h4>
+					<xmp>
+var uiSlide = bui.slide({
+    id:"#slide",
+	fullscreen:true
+})
+			 		</xmp>
+					
+				</div>
+			</div>
+		</div>
+	</main>
+</div>

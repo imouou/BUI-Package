@@ -1,0 +1,66 @@
+
+    <div class="bui-page">
+        <header class="bui-bar">
+            <div class="bui-bar-left">
+                <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+            </div>
+            <div class="bui-bar-main">loader.require</div>
+            <div class="bui-bar-right"></div>
+        </header>
+        <main>
+            <!-- 模块用法 -->
+            <h3 class="section-title">模块默认已经初始化给 window.loader </h3>
+
+            <div class="container-xy">
+                <p>用法: loader.require(depend,callback);</p>
+                
+            </div>
+            <table class="bui-table">
+                <tr>
+                    <th>字段名</th>
+                    <th>类型</th>
+                </tr>
+                <tr>
+                    <td>depend</td>
+                    <td>array</td>
+                </tr>
+                <tr>
+                    <td>callback</td>
+                    <td>function</td>
+                </tr>
+            </table>
+            <div class="bui-panel">
+                <div class="bui-panel-head">用法1: 加载匿名模块示例: </div>
+                <div class="bui-panel-main">
+                    <div class="container">
+                        js:
+                <xmp>
+// 加载匿名模块, 匿名模块默认以脚本路径为名,无需.js
+
+loader.require(["pages/page2/page2"],function(page2){
+
+    // page2 == {page:"page2"} 
+})
+                </xmp>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bui-panel">
+                <div class="bui-panel-head">用法2: 加载指定模块示例: </div>
+                <div class="bui-panel-main">
+                    <div class="container">
+                        js:
+                <xmp>
+
+loader.require(["page2"],function(page2){
+
+    // page2 == {page:"page2"} 
+})
+                </xmp>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>

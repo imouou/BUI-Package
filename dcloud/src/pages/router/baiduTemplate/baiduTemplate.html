@@ -1,0 +1,42 @@
+<!-- 这里还是一个标准的BUI页面 -->
+<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="window.history.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">BUI使用百度模板</div>
+        <div class="bui-bar-right"></div>
+    </header>
+    <main>
+        <!-- 百度模板容器 -->
+        <div id='result'></div>
+    </main>
+</div>
+
+<!-- 模板1开始，可以使用script（type设置为text/html）来存放模板片段，并且用id标示 -->
+<script id="t:_1234-abcd-1" type="text/html">
+<div>
+    <!-- 我是注释，语法均为Javascript原生语法，默认分割符为 <% %> ，也可以自定义，参见API部分 -->
+    <!-- 输出变量语句，输出title -->
+    <div class="container">
+        <h1 class="section-title">title:<%=title%></h1>
+    </div>
+    <!-- 判断语句if else-->
+    <%if(list.length>1) { %>
+
+        <div class="container-xy">
+            <h2 class="section-title">输出list，共有<%=list.length%>个元素</h2>
+        </div>
+        <ul class="bui-list">
+            <!-- 循环语句 for-->
+            <%for(var i=0;i<5;i++){%>
+                <li class="bui-btn"><%=list[i]%></li>
+            <%}%>
+        </ul>
+    <%}else{%>
+        <h2>没有list数据</h2>   
+    <%}%>
+</div>  
+</script>
+<!-- 模板1结束 -->
+

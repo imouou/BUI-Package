@@ -1,0 +1,115 @@
+<!-- 这里还是一个标准的BUI页面 -->
+<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn btn-back"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">路由事件</div>
+        <div class="bui-bar-right"></div>
+    </header>
+    <main>
+        <h3 class="section-title">路由常用事件</h3>
+        <div class="container-xy">
+            <p>用法: router.on(type,callback); </p>
+            <p>type值: load(只加载一次) | back(每次) | refresh(每次) | loadpart(只加载一次) | complete(每次) </p>
+        </div>
+        <table class="bui-table">
+            <tr>
+                <th>字段名</th>
+                <th>类型</th>
+                <th>必须</th>
+            </tr>
+            <tr>
+                <td>type</td>
+                <td>string</td>
+                <td>是</td>
+            </tr>
+            <tr>
+                <td>callback</td>
+                <td>function</td>
+                <td>是</td>
+            </tr>
+        </table>
+        <h3 class="section-title">load 页面跳转后触发</h3>
+        <div class="bui-panel">
+            <div class="bui-panel-head">示例:</div>
+            <div class="bui-panel-main">
+                <div class="container">
+                    <xmp>
+router.on("load",function(e){
+    // 上一页参数
+    console.log(e.prevTarget)
+    // 当前页参数
+    console.log(e.target)
+});
+                    </xmp>
+                    <strong class="danger-reverse">注意:</strong>回调会拿到跳转后的参数以及上一页的参数
+                </div>
+            </div>
+        </div>
+        <h3 class="section-title">back 页面后退后触发</h3>
+        <div class="bui-panel">
+            <div class="bui-panel-head">示例:</div>
+            <div class="bui-panel-main">
+                <div class="container">
+                    <xmp>
+router.on("back",function(e){
+    // 上一页参数
+    console.log(e.prevTarget)
+    // 当前页参数
+    console.log(e.target)
+});
+                    </xmp>
+                </div>
+            </div>
+        </div>
+        <h3 class="section-title">refresh 页面刷新后触发</h3>
+        <div class="bui-panel">
+            <div class="bui-panel-head">示例:</div>
+            <div class="bui-panel-main">
+                <div class="container">
+                    <xmp>
+router.on("refresh",function(e){
+    // 上一页参数
+    console.log(e.prevTarget)
+    // 当前页参数
+    console.log(e.target)
+});
+                    </xmp>
+                </div>
+            </div>
+        </div>
+        <h3 class="section-title">loadpart 局部加载后触发</h3>
+        <div class="bui-panel">
+            <div class="bui-panel-head">示例:</div>
+            <div class="bui-panel-main">
+                <div class="container">
+                    <xmp>
+router.on("loadpart",function(e){
+    // 上一页参数
+    console.log(e.prevTarget)
+    // 当前页参数
+    console.log(e.target)
+});
+                    </xmp>
+                </div>
+            </div>
+        </div>
+        <h3 class="section-title">complete 每次跳转以后执行</h3>
+        <div class="bui-panel">
+            <div class="bui-panel-head">示例:</div>
+            <div class="bui-panel-main">
+                <div class="container">
+                    <xmp>
+router.on("complete",function(e){
+    // 上一页参数
+    console.log(e.prevTarget)
+    // 当前页参数
+    console.log(e.target)
+});
+                    </xmp>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

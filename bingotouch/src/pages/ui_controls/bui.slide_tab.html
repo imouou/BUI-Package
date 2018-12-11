@@ -1,0 +1,269 @@
+﻿
+<div class="bui-page">
+	<header class="bui-bar">
+		<div class="bui-bar-left">
+			<a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+		</div>
+		<div class="bui-bar-main">
+			TAB选项卡
+		</div>
+		<div class="bui-bar-right">
+		</div>
+	</header>
+	<main>
+		<!-- bui-navbar 在按钮有多个的情况有用, 如果没有会是自适应的按钮 -->
+		<div id="uiSlideNavbar" class="bui-navbar">
+			<ul id="nav" class="bui-nav"><li class="bui-btn">1. TAB底部动态加载</li><li class="bui-btn">2. 导航平分宽度</li><li class="bui-btn">3. 导航滚动</li><li class="bui-btn">4. 顶部导航</li><li class="bui-btn">5. TAB自动高度</li>
+			</ul>
+		</div>
+    <!-- <ul id="nav" class="bui-nav"><li class="bui-btn">1. TAB底部动态加载</li><li class="bui-btn">2. 导航平分宽度</li> -->
+      </ul>
+        <!--  bui-tab-autoheight 类名可以用于页面的局部TAB高度自适应 -->
+		<div id="uiSlideTab" class="bui-tab">
+			<div class="bui-tab-main">
+				<ul>
+                    <li>
+                        <div class="section-title">1. TAB动态加载</div>
+                        <div class="bui-panel">
+                            <div class="bui-panel-head">示例:</div>
+                            <div class="bui-panel-main">
+                                <div class="container">
+                                    <h4>html:</h4>
+                    <xmp>
+<main>
+<div id="tabDynamic" class="bui-tab">
+    <div class="bui-tab-main">
+        <ul>
+            <li>
+                <!-- 首页 -->
+            </li>
+            <li>
+                <!-- 新闻tab -->
+            </li>
+        </ul>
+    </div>
+</div>
+</main>
+<footer>
+<!-- 3. 给菜单加一个href链接地址 -->
+<ul id="tabDynamicNav" class="bui-nav">
+    <li class="bui-btn bui-box-vertical active" href="pages/ui_controls/bui.slide_tab_dynamic_page1.html"><i class="icon-home"><span class="bui-badges">15</span></i><div class="span1">首页</div></li>
+    <li class="bui-btn bui-box-vertical" href="pages/ui_controls/bui.slide_tab_dynamic_page1.html"><i class="icon-share"></i><div class="span1">新闻</div></li>
+</ul>
+</footer>
+                    </xmp>
+                    <h4>js:</h4>
+                    <xmp>
+//按钮在tab外层,需要传id
+var tab = bui.slide({
+    id:"#tabDynamic",
+    menu:"#tabDynamicNav",
+    children:".bui-tab-main > ul",
+    scroll: true,
+    // 1: 声明是动态加载的tab
+    autoload: true,
+})
+
+// 2: 监听加载后的事件, load 只加载一次
+tab.on("load",function (res) {
+    console.log($(this).index())
+})  
+                    </xmp>  
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+					<li>
+                        
+                        <div class="container-xy">
+                            小提示: 该例子可以在手机中拖动
+                        </div>  
+						<div class="section-title">2. 导航按钮平分宽度</div>
+						<div class="bui-panel">
+							<div class="bui-panel-head">示例:</div>
+							<div class="bui-panel-main">
+								<div class="container">
+									<h4>html:</h4>
+					<xmp>
+
+<div id="uiSlideTab" class="bui-tab">
+  <!-- 按钮较少时,这里是平分宽度 -->
+  <div class="bui-tab-head">
+    <ul class="bui-nav">
+      <li class="bui-btn active">首页</li>
+      <li class="bui-btn ">新闻</li>
+    </ul>
+  </div>
+  <div class="bui-tab-main">
+    <ul>
+      <li>
+        滑动的内容
+      </li>
+      <li>
+        滑动的内容
+      </li>
+    </ul>
+  </div>
+</div>
+				    </xmp>
+					<h4>js:</h4>
+					<xmp>
+var tab = bui.slide({
+    id:"#uiSlideTab",
+    menu:".bui-nav",
+    children:".bui-tab-main > ul",
+    scroll: true
+
+})		
+					</xmp>	
+									
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="active">
+						<div class="section-title">3. 导航横向滚动示例--结构解耦</div>
+						<div class="bui-panel">
+							<div class="bui-panel-head">示例:</div>
+							<div class="bui-panel-main">
+								<div class="container">
+									<h4>html:</h4>
+					<xmp>
+<!-- bui-navbar 在按钮有多个的情况有用, 
+如果没有会是自适应的按钮 -->
+<div id="uiSlideNavbar" class="bui-navbar">
+  <ul id="nav" class="bui-nav">
+    <li class="bui-btn active">首页</li><li class="bui-btn ">新闻</li><li class="bui-btn">首页</li><li class="bui-btn ">新闻</li><li class="bui-btn">首页</li><li class="bui-btn ">新闻</li><li class="bui-btn">首页</li><li class="bui-btn ">新闻</li>
+  </ul>
+</div>
+<div id="uiSlideTab" class="bui-tab">
+  <div class="bui-tab-main">
+    <ul>
+      <li>
+        滑动的内容
+      </li>
+      <li>
+        滑动的内容
+      </li>
+    </ul>
+  </div>
+</div>
+				    </xmp>
+					<h4>js:</h4>
+					<xmp>
+var tab = bui.slide({
+    id:"#uiSlideTab",
+    menu:"#nav",
+    children:".bui-tab-main > ul",
+    scroll: true
+})		
+
+// 让顶部导航滚动到可视位置
+uiSlideTab.on("to",function (index) {
+
+    var left = $("#nav li")[index].offsetLeft;
+    document.getElementById("uiSlideNavbar").scrollLeft = left;
+})
+					</xmp>	
+									
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="section-title">4. 导航按钮在顶部--结构解耦</div>
+						<div class="bui-panel">
+							<div class="bui-panel-head">示例:</div>
+							<div class="bui-panel-main">
+								<div class="container">
+									<h4>html:</h4>
+					<xmp>
+<header class="bui-bar">
+  <div class="bui-bar-left"></div>
+  <div class="bui-bar-main">
+    <ul id="tabNav" class="bui-nav">
+      <li class="bui-btn active">首页</li>
+      <li class="bui-btn ">新闻</li>
+    </ul>
+  </div>
+  <div class="bui-bar-right"></div>
+</header>
+<main>
+<div id="uiSlideTab" class="bui-tab">
+  <div class="bui-tab-main">
+    <ul>
+      <li>
+        滑动的内容
+      </li>
+      <li>
+        滑动的内容
+      </li>
+    </ul>
+  </div>
+</div>
+</main>
+				    </xmp>
+					<h4>js:</h4>
+					<xmp>
+var tab = bui.slide({
+    id:"#uiSlideTab",
+    menu:"#tabNav",
+    children:".bui-tab-main > ul",
+    scroll: true
+
+})		
+					</xmp>	
+									
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="section-title">5. TAB自动高度</div>
+						<div class="bui-panel">
+							<div class="bui-panel-head">示例:</div>
+							<div class="bui-panel-main">
+								<div class="container">
+									<h4>html:</h4>
+					<xmp>
+<div id="uiSlideTab" class="bui-tab bui-tab-autoheight">
+  <div class="bui-tab-head">
+    <ul class="bui-nav">
+      <li class="bui-btn active">首页</li>
+      <li class="bui-btn ">新闻</li>
+    </ul>
+  </div>
+  <div class="bui-tab-main">
+    <ul>
+      <li>
+        滑动的内容
+      </li>
+      <li>
+        滑动的内容
+      </li>
+    </ul>
+  </div>
+</div>
+                    </xmp>
+                    <h4>js:</h4>
+                    <xmp>
+var tab = bui.slide({
+    id:"#uiSlideTab",
+    menu:".bui-nav",
+    children:".bui-tab-main > ul",
+    scroll: false
+})      
+                    </xmp>  
+									
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		
+	</main>
+</div>

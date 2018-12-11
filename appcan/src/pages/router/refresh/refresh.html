@@ -1,0 +1,52 @@
+<!-- 这里还是一个标准的BUI页面 -->
+<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn btn-back"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">刷新页面-router.refresh</div>
+        <div class="bui-bar-right"></div>
+    </header>
+    <main>
+        <div class="container-xy">
+            <p>用法: router.refresh();</p>
+            <p>**注意** 如果要保持跟多页方式一致,则使用 bui.refresh() </p>
+        </div>
+        <h3 class="section-title">刷新页面</h3>
+        <div class="bui-panel">
+            <div class="bui-panel-head">示例:</div>
+            <div class="bui-panel-main">
+                <div class="container">
+                    <xmp>
+// 页面刷新
+router.refresh();
+                    </xmp>
+                    <strong class="danger-reverse">注意: </strong>如果有事件绑定,会导致事件重复绑定,采用局部刷新则不存在这个问题
+                </div>
+            </div>
+        </div>
+        <h3 class="section-title">局部刷新</h3>
+        <div class="bui-panel">
+            <div class="bui-panel-head">示例:</div>
+            <div class="bui-panel-main">
+                <div class="container">
+                    <xmp>
+// 局部刷新, 假设当前模块的名称是 main, 一般匿名模块名字为路径名去掉.html
+
+loader.require(["main"],function(main){
+    main.init();
+})
+                    </xmp>
+                    
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="container-xy">
+            <div id="refresh" class="bui-btn primary round">刷新页面</div>
+        </div>
+    </footer>
+
+</div>

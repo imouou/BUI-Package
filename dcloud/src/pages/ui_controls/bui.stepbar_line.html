@@ -1,0 +1,82 @@
+﻿<style>
+    .tips {
+        font-size: .36rem;
+    }
+    .tips .text{
+        display: block;
+    }
+</style>
+<div class="bui-page">
+	<header class="bui-bar">
+		<div class="bui-bar-left">
+			<a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+		</div>
+		<div class="bui-bar-main">步骤条</div>
+		<div class="bui-bar-right">
+		</div>
+	</header>
+	<main>
+		<!-- 横向 -->
+		<div id="step" class="bui-stepbar-line"></div>
+		<div class="stepbar-wrap">
+            <div class="stepbar">
+                <ul class="bui-list">
+                    <li class="bui-btn bui-box clearactive">
+                        <label class="bui-label" for="phonenumber">手机号:</label>
+                        <div class="span1">
+                            <div class="bui-input user-input">
+                                <input id="phonenumber" type="number" class="bui-input" value="" placeholder="请输入手机号">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bui-btn bui-box clearactive">
+                        <label class="bui-label">验证码:</label>
+                        <div class="span1">
+                            <input type="text" class="bui-input" value="" placeholder="请输入验证码" maxlength="4">
+                        </div>
+                        <div class="bui-btn primary-reverse mini ring" id="btnSend">发送验证码</div>
+                    </li>
+                </ul>
+                <div class="container-xy">
+                    <div class="bui-btn round primary step1">提交</div>
+                </div>
+            </div>
+            <div class="stepbar" style="display: none;">
+                <ul class="bui-list">
+                    <li class="bui-btn bui-box clearactive">
+                        <label class="bui-label" for="phonenumber">密码:</label>
+                        <div class="span1">
+                            <div class="bui-input user-input">
+                                <input id="phonenumber" type="number" class="bui-input" value="" placeholder="请输入手机号">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bui-btn bui-box clearactive">
+                        <label class="bui-label" for="password">确认密码:</label>
+                        <div class="span1">
+                            <div id="passwordInput" class="bui-input">
+                                <input id="password" type="password" placeholder="请输入密码">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="container-xy">
+                    <div class="bui-btn round primary step2">确定修改</div>
+                </div>
+            </div>
+            <div class="stepbar" style="display: none;">
+                <div class="bui-box-center">
+                    <div class="tips">
+                        <i class="icon-successfill xxlarge success"></i>
+                        <div class="item-title">修改成功</div>
+                        <div class="item-text">描述信息</div>
+                    </div>
+                </div>
+                <div class="container-xy bui-interval">
+                    <div class="bui-btn primary round btn-back">返回上一页</div>
+                    <div class="bui-btn round btn-prev-step">返回上一步</div>
+                </div>
+            </div>
+        </div>
+	</main>
+</div>

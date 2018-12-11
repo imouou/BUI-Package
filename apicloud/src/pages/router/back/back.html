@@ -1,0 +1,96 @@
+<!-- 这里还是一个标准的BUI页面 -->
+<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn btn-back"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">后退页面-router.back</div>
+        <div class="bui-bar-right"></div>
+    </header>
+    <main>
+        <div class="container-xy">
+            <p>用法: router.back(obj); </p>
+            <p>**注意** 如果要保持跟多页方式一致,则使用 bui.back(obj) </p>
+        </div>
+        <table class="bui-table">
+            <tr>
+                <th>字段名</th>
+                <th>类型</th>
+                <th>必须</th>
+            </tr>
+            <tr>
+                <td>obj</td>
+                <td>object</td>
+                <td>否</td>
+            </tr>
+            <tr>
+                <td>obj.index</td>
+                <td>number</td>
+                <td>否</td>
+            </tr>
+            <tr>
+                <td>obj.callback</td>
+                <td>function</td>
+                <td>否</td>
+            </tr>
+        </table>
+        <h3 class="section-title">后退1层</h3>
+        <div class="bui-panel">
+            <div class="bui-panel-head">示例:</div>
+            <div class="bui-panel-main">
+                <div class="container">
+                    <xmp>
+// 后退
+router.back();
+                    </xmp>
+                    <strong class="danger-reverse">注意:</strong>单页的后退,一般在index.js做统一绑定就可以了,也可以使用多页的bui.back(); 
+                    
+                </div>
+            </div>
+        </div>
+        <h3 class="section-title">后退2层</h3>
+        <div class="bui-panel">
+            <div class="bui-panel-head">示例:</div>
+            <div class="bui-panel-main">
+                <div class="container">
+                    <xmp>
+// 后退
+router.back({index:-2});
+                    </xmp>
+                </div>
+            </div>
+        </div>
+        <h3 class="section-title">后退并刷新</h3>
+        <div class="bui-panel">
+            <div class="bui-panel-head">示例:</div>
+            <div class="bui-panel-main">
+                <div class="container">
+                    <xmp>
+// 用法1: 后退并刷新
+router.back({index:-2,callback:function(){
+    router.refresh();
+}});
+
+// 用法2: 后退并刷新
+router.back({
+    index:-2,
+    callback:function(){
+        // 指定模块. 假设后退2层以后的模块是main
+        loader.require(["main"],function(main){
+            // 调用main 模块的init 方法
+            main.init();
+        })
+    }
+});
+                    </xmp>
+                    <strong class="danger-reverse">注意:</strong>这种可能会导致该模块重复绑定时间 
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container-xy">
+            <div id="backToMain" class="bui-btn primary round">后退并更新数字</div>
+        </div>
+    </footer>
+</div>

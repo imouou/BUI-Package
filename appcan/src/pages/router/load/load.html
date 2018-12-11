@@ -1,0 +1,73 @@
+<!-- 这里还是一个标准的BUI页面 -->
+<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn btn-back"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">跳转新页面-router.load</div>
+        <div class="bui-bar-right"></div>
+    </header>
+    <main>
+        <h3 class="section-title">load 页面跳转,更多参数用法请参考 bui.router 的 api</h3>
+
+        <div class="container-xy">
+            <p>用法: router.load(obj); </p>
+            <p>**注意** 如果要保持跟多页方式一致,则使用 bui.load(obj) </p>
+            
+        </div>
+        <table class="bui-table">
+            <tr>
+                <th>字段名</th>
+                <th>类型</th>
+                <th>必须</th>
+            </tr>
+            <tr>
+                <td>obj</td>
+                <td>object</td>
+                <td>是</td>
+            </tr>
+            <tr>
+                <td>obj.url</td>
+                <td>string</td>
+                <td>是</td>
+            </tr>
+            <tr>
+                <td>obj.param</td>
+                <td>object</td>
+                <td>否</td>
+            </tr>
+        </table>
+        <h3 class="section-title">普通跳转 router.load</h3>
+        <div class="bui-panel">
+            <div class="bui-panel-head">示例:</div>
+            <div class="bui-panel-main">
+                <div class="container">
+                    <xmp>
+// 页面跳转
+router.load({ url: "pages/page2/page2.html" });
+                    </xmp>
+                    <strong class="danger-reverse">注意:</strong>单页的页面跳转可以保持跟多页开发方式一致, 也就是你也可以使用 bui.load, 并且单页的跳转只需像index.js 一样,初始化一次就可以了
+                </div>
+            </div>
+        </div>
+        <h3 class="section-title">页面传参 router.load</h3>
+        <div class="bui-panel">
+            <div class="bui-panel-head">示例:</div>
+            <div class="bui-panel-main">
+                <div class="container">
+                    <xmp>
+// 页面跳转并且传参数给 pages/page2/page2   param 为要传过去的参数
+
+router.load({ url: "pages/page2/page2.html",param: {"name":"page2"} });
+                    </xmp>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container-xy">
+            <div class="bui-btn primary round" href="pages/router/getPageParams/getPageParams.html" param='{"page":"load"}'>传参给下一个页面</div>
+        </div>
+    </footer>
+</div>

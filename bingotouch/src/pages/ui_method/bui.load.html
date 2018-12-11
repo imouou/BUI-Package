@@ -1,0 +1,33 @@
+﻿
+<div class="bui-page">
+	<header class="bui-bar">
+		<div class="bui-bar-left">
+			<a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+		</div>
+		<div class="bui-bar-main">bui.load</div>
+		<div class="bui-bar-right">
+		</div>
+	</header>
+	<main>
+		<div class="section-title">第1种跳转 (直接跳转,需要自己绑定按钮)</div>
+		<dl class="bui-accordion">
+			<dt id="load" class="bui-btn bui-box">
+				<div class="span1">bui.load 跳转</div>
+				<i class="icon-listright"></i>
+			</dt>
+		</dl>
+		
+		<div class="section-title">第2种绑定跳转 (href属性跳转,首页已经绑定)</div>
+		
+		<ul id="list" class="bui-list">
+		  <li href="pages/ui_method/bui.getPageParams.html" class="bui-btn bui-box" >
+		  	<div class="span1">bui.btn 不带参数跳转</div>
+			<i class="icon-listright"></i>
+		  </li>
+		  <li href="pages/ui_method/bui.getPageParams.html?id=222" class="bui-btn bui-box" >
+		    <div class="span1">bui.btn 带参数跳转</div>
+			<i class="icon-listright"></i>
+		  </li>
+		</ul>
+	</main>
+</div>

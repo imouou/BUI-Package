@@ -1,0 +1,47 @@
+
+<div class="bui-page">
+	<header class="bui-bar">
+		<div class="bui-bar-left">
+			<a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+		</div>
+		<div class="bui-bar-main">
+        <div id="btnSearchDialog" class="bui-input">
+          <i class="icon-search"></i><span class="placeholder">搜索</span>
+        </div>
+    </div>
+		<div class="bui-bar-right">
+		</div>
+	</header>
+	<main>
+		<img src="images/placeholder-page.png" alt="占位图">
+	</main>
+</div>
+<div id="uiDialog" class="bui-dialog" style="display: none;">
+    <div class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" id="btnBack"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">
+            <div id="searchbar" class="bui-input ring mini">
+              <i class="icon-search"></i>
+              <input type="search" value="" placeholder="请输入关键字"/>
+            </div>
+        </div>
+        <div class="bui-bar-right">
+            <div id="btnSearch" class="bui-btn">
+              搜索</div>  
+        </div>
+    </div>
+    <div class="bui-dialog-main">
+      
+      <!-- 列表控件结构 -->
+      <div id="scrollSearch" class="bui-scroll">
+        <div class="bui-scroll-head"></div>
+        <div class="bui-scroll-main">
+          <ul class="bui-list">
+          </ul> 
+        </div>
+        <div class="bui-scroll-foot"></div>
+      </div>
+    </div>
+</div>

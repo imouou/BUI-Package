@@ -1,0 +1,106 @@
+
+<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">loader.define</div>
+        <div class="bui-bar-right"></div>
+    </header>
+    <main>
+        <!-- 模块用法 -->
+        <h3 class="section-title">模块默认已经初始化给 window.loader </h3>
+
+        <div class="container-xy">
+            <p>用法: loader.define(moduleName,depend,callback);</p>
+            
+        </div>
+        <table class="bui-table">
+            <tr>
+                <th>字段名</th>
+                <th>类型</th>
+            </tr>
+            <tr>
+                <td>moduleName</td>
+                <td>string</td>
+            </tr>
+            <tr>
+                <td>depend</td>
+                <td>array</td>
+            </tr>
+            <tr>
+                <td>callback</td>
+                <td>function</td>
+            </tr>
+        </table>
+        <div class="bui-panel">
+            <div class="bui-panel-head">用法1: 定义一个匿名模块示例: </div>
+            <div class="bui-panel-main">
+                <div class="container">
+                    js: 
+            <xmp>
+// 假设脚本路径: pages/page2/page2.js, 那么匿名模块的模块名为: pages/page2/page2
+
+loader.define(function(){
+
+// 返回模块的公共方法
+return {
+    page: "page2"
+}
+})
+            </xmp>
+                </div>
+            </div>
+        </div>
+        <div class="bui-panel">
+            <div class="bui-panel-head">用法2: 定义的模块可以依赖其它模块 </div>
+            <div class="bui-panel-main">
+                <div class="container">
+                    js: 
+            <xmp>
+
+// 假设 page3,page4 是匿名模块,并且按照示例的位置存放
+
+loader.define(["pages/page3/page3","pages/page4/page4"],function(page3,page4){
+
+// 这里可以拿到依赖的模块,前提是page3,page4 有返回
+console.log(page3,page4)
+
+// 返回模块的公共方法
+return {
+    page: "page2"
+}
+})
+
+            </xmp>
+                </div>
+            </div>
+        </div>
+        <div class="bui-panel">
+            <div class="bui-panel-head">用法3: 定义指定模块示例: </div>
+            <div class="bui-panel-main">
+                <div class="container">
+                    js: 
+            <xmp>
+// 指定模块名为: page2 , (匿名模块基于路径命名,如果觉得有点长,可以指定模块名)
+
+loader.define("page2", function(){
+
+// 返回模块的公共方法
+return {
+    page: "page2"
+}
+})
+
+// 需要在路由初始化前, 通过map修改脚本路径, 假设脚本路径: pages/page2/page2.js, 
+
+loader.map({
+moduleName: "page2",
+script: "pages/page2/page2.js"
+})
+            </xmp>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

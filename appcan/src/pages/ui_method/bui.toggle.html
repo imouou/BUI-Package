@@ -1,0 +1,95 @@
+﻿
+<style>
+	.moving {
+		width: 100px;
+		height: 100px;
+		line-height: 100px;
+		background: #ff3330;
+		color: #fff;
+		text-align: center;
+		z-index: 10;
+		margin: 0 auto;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-left: -50px;
+		margin-top: -50px;
+	}
+</style>
+<div class="bui-page">
+	<header id="bar" class="bui-bar">
+		<div class="bui-bar-left">
+			<a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+			
+		</div>
+		<div class="bui-bar-main">动画切换器</div>
+		<div class="bui-bar-right">
+		</div>
+	</header>
+	<main>
+		
+		<div id="animate" class="moving">
+			我是移动的动画
+		</div>
+		<div class="section-title">无动画</div>
+		<div class="bui-box">
+			<div class="span1"><div id="showIn" class="bui-btn">showIn</div></div>
+			<div class="span1"><div id="showOut" class="bui-btn">showOut</div></div>
+		</div>
+		<div class="section-title">渐隐渐现</div>
+		<div class="bui-box">
+			<div class="span1"><div id="fadeIn" class="bui-btn">fadeIn</div></div>
+			<div class="span1"><div id="fadeOut" class="bui-btn">fadeOut</div></div>
+		</div>
+		<div class="section-title">从左边渐现</div>
+		<div class="bui-box">
+			<div class="span1"><div id="fadeInLeft" class="bui-btn">fadeInLeft</div></div>
+			<div class="span1"><div id="fadeOutLeft" class="bui-btn">fadeOutLeft</div></div>
+		</div>
+		<div class="section-title">从右边渐现</div>
+		<div class="bui-box">
+			<div class="span1"><div id="fadeInRight" class="bui-btn">fadeInRight</div></div>
+			<div class="span1"><div id="fadeOutRight" class="bui-btn">fadeOutRight</div></div>
+		</div>
+		<div class="section-title">从底部渐现</div>
+		<div class="bui-box">
+			<div class="span1"><div id="fadeInUp" class="bui-btn">fadeInUp</div></div>
+			<div class="span1"><div id="fadeOutDown" class="bui-btn">fadeOutDown</div></div>
+		</div>
+		<div class="section-title">从顶部渐现</div>
+		<div class="bui-box">
+			<div class="span1"><div id="fadeInDown" class="bui-btn">fadeInDown</div></div>
+			<div class="span1"><div id="fadeOutUp" class="bui-btn">fadeOutUp</div></div>
+		</div>
+		<div class="section-title">放大</div>
+		<div class="bui-box">
+			<div class="span1"><div id="zoomIn" class="bui-btn">zoomIn</div></div>
+			<div class="span1"><div id="zoomOut" class="bui-btn">zoomOut</div></div>
+		</div>
+		<div class="section-title">跳动</div>
+		<div class="bui-box">
+			<div class="span1"><div id="bounceIn" class="bui-btn">bounceIn</div></div>
+			<div class="span1"><div id="bounceOut" class="bui-btn">bounceOut</div></div>
+		</div>
+		<div class="section-title">旋转进场</div>
+		<div class="bui-box">
+			<div class="span1"><div id="rollIn" class="bui-btn">rollIn</div></div>
+			<div class="span1"><div id="rollOut" class="bui-btn">rollOut</div></div>
+		</div>
+		<div class="section-title">速度缓冲效果</div>
+		<div class="bui-box">
+			<div class="span1"><div id="lightSpeedIn" class="bui-btn">lightSpeedIn</div></div>
+			<div class="span1"><div id="lightSpeedOut" class="bui-btn">lightSpeedOut</div></div>
+		</div>
+		<div class="section-title">水平翻转</div>
+		<div class="bui-box">
+			<div class="span1"><div id="flipInX" class="bui-btn">flipInX</div></div>
+			<div class="span1"><div id="flipOutX" class="bui-btn">flipOutX</div></div>
+		</div>
+		<div class="section-title">垂直翻转</div>
+		<div class="bui-box">
+			<div class="span1"><div id="flipInY" class="bui-btn">flipInY</div></div>
+			<div class="span1"><div id="flipOutY" class="bui-btn">flipOutY</div></div>
+		</div>
+	</main>
+</div>
