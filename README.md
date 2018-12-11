@@ -2,8 +2,12 @@
 
 ## 使用命令
 ```
+# 安装依赖
+npm install
+
 # 预览dcloud平台demo
 npm run dev-dcloud
+
 # 打包压缩版的demo 用于上传
 npm run build-dcloud
 ```
