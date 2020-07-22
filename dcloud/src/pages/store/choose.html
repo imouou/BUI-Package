@@ -1,0 +1,24 @@
+<div class="bui-page page-store">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">交互选择列表</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+        <div class="bui-btn" b-click="page.open()">点击选择喜欢的城市</div>
+        <div class="subtitle">您已选择:</div>
+        <!-- 列表控件 html 对应的结构:  -->
+        <ul class="bui-list" b-template="page.tplItem(page.checkedObj)"></ul>
+
+    </main>
+    <div id="uiDialog" class="bui-dialog">
+        <div class="bui-dialog-head">选择喜欢的城市</div>
+        <div class="bui-dialog-main">
+          <ul class="bui-list" b-template="page.tplCity(page.items)"></ul>
+        </div>
+        <div class="bui-dialog-close"><i class="icon-close"></i></div>
+    </div>
+</div>

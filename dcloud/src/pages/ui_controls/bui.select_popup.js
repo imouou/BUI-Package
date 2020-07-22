@@ -5,6 +5,8 @@
         trigger: "#select",
         title: "请选择区域",
         type: "checkbox",
+        needSearch: true,
+        // height: 300,
         data: [{
             "name": "广东",
             "value": "11"
@@ -23,8 +25,14 @@
         }, {
             "name": "南京",
             "value": "66"
+        }, {
+            "name": "江苏",
+            "value": "77"
+        }, {
+            "name": "云南",
+            "value": "88"
         }],
-        value: ["广东", "上海"],
+        // value: ["广东", "上海"],
         //如果需要点击再进行操作,增加按钮
         buttons: [{ name: "重置", className: "" }, { name: "确定", className: "primary-reverse" }],
         callback: function(e) {
@@ -33,19 +41,23 @@
             if (text == "重置") {
                 uiSelect.selectNone();
             } else {
+                uiSelect.clearSearch();
                 uiSelect.hide();
             }
         },
-        onChange: function(argument) {
-            console.log("312312")
+        onChange: function(e) {
+            console.log(e)
         }
     })
+
+    // 清空数据
+    // uiSelect.option("data", [])
 
     //静态自定义绑定
     var uiSelect2 = bui.select({
         id: "#select-dialog",
         trigger: "#select2",
-        type: "checkbox",
+        type: "radio",
         effect: "fadeInRight",
         position: "right",
         fullscreen: true,
@@ -58,4 +70,5 @@
         console.log(uiSelect2.value())
         uiSelect2.hide();
     });
+
 })

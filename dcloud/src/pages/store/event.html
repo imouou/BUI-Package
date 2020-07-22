@@ -1,0 +1,35 @@
+﻿<div class="bui-page page-store">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">事件绑定传参</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+
+        <div class="section-title" ref="tit">1.传一个对象</div>
+        <!-- 1.5.2 b-target="main" 属性可以修改点击的时候,$this,$index 的指向,避免层级过深找不到index -->
+        <div class="bui-btn" b-click='page.getMessage($this,{"id":"123"},"a6042316-64c2-4229-9da5-9324261d3ed8")'>点击输出参数是一个对象</div>
+        <div class="section-title">2.传多个参数</div>
+        <div class="bui-btn" b-click='page.getMessage({"id":"我是中文"},"http://easybui:8083/bui.png?id=123","page.b",4.1)'>点击输出3个参数</div>
+
+
+        输出结果: <span class="result"></span>
+
+        <div class="section-title">3.触发watch</div>
+        <div class="bui-btn" b-click="page.changeA()">改变a的值,触发watch事件</div>
+        a: <b b-text="page.a"></b>
+        <div class="section-title">4.自定义事件</div>
+        <div class="bui-btn" b-click="page.customEvent">触发自定义传参</div>
+
+        <div class="section-title">5.事件嵌套</div>
+        <div class="bui-box" b-click="page.changeA()">
+            <div class="bui-btn">changeA</div>
+            <div class="span1">
+                <div class="bui-btn" b-click='page.getMessage($this,{"id":"123"},"a6042316-64c2-4229-9da5-9324261d3ed8")'>点击输出参数是一个对象</div>
+            </div>
+        </div>
+    </main>
+</div>

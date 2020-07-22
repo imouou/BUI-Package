@@ -68,8 +68,8 @@
             uiFile.getFile({
                 folderName: "download",
                 fileName: "bui.jpg",
-                onSuccess: function (data) { 
-                    
+                onSuccess: function (data) {
+
                     // // 打开图片
                     this.open({
                         url: data.fullPath

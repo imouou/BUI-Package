@@ -1,24 +1,25 @@
 ﻿<style>
-.selected-val,
-.selected-vals {
-    margin-right:.2rem;
-}
+    .selected-val,
+    .selected-vals {
+        margin-right: .2rem;
+    }
 </style>
 <div class="bui-page">
-	<header class="bui-bar">
-		<div class="bui-bar-left">
-			<a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
-		</div>
-		<div class="bui-bar-main">京东省市区选择</div>
-		<div class="bui-bar-right">
-		</div>
-	</header>
-	<main>
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">京东省市区选择</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
         <ul class="bui-list">
             <li class="bui-btn bui-box clearactive">
                 <div class="bui-label">所在地区</div>
                 <div class="span1">
                     <div id="chooseCity" class="bui-box">
+                        <div class="selected-val"></div>
                         <div class="selected-val"></div>
                         <div class="selected-val"></div>
                         <div class="selected-val"></div>
@@ -46,6 +47,6 @@
                 </div>
             </div>
         </div>
-        
-	</main>
+
+    </main>
 </div>

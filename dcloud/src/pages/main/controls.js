@@ -11,15 +11,12 @@ loader.define(function(require, exports, module) {
             height: accordionHeight,
             single: true,
             callback: function(e) {
-                controls.scrollTop = e.target.offsetTop - 5;
+                controls.scrollTop = e.currentTarget.offsetTop - 5;
             }
         });
 
         uiAccordion.showFirst()
     }
-
-
-    pageview.init();
 
     return pageview;
 

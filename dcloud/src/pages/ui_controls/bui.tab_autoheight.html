@@ -1,0 +1,49 @@
+﻿<style>
+    /* 以内容自适应,无切换动画 */
+    /* .bui-slide-autoheight .bui-tab-main {
+        width: 100% !important;
+        transform: translate(0, 0px) !important;
+    }
+    
+    .bui-slide-autoheight .bui-tab-main>ul>li {
+        display: none !important;
+    }
+    
+    .bui-slide-autoheight .bui-tab-main>ul>li.active {
+        display: block !important;
+    } */
+</style>
+<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">
+            自动高度选项卡
+        </div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+        <!-- 不能有动画切换效果 -->
+        <div id="uiTab" class="bui-tab">
+            <div class="bui-tab-head">
+                <ul class="bui-nav">
+                    <li class="bui-btn">课程</li>
+                    <li class="bui-btn">观点</li>
+                    <li class="bui-btn">专访</li>
+                    <li class="bui-btn">公开课</li>
+                </ul>
+            </div>
+            <div class="bui-tab-main">
+                <ul>
+                    <!-- 内容必须在li里面 -->
+                    <li>无滚动内容,第2个有滚动条</li>
+                    <li style="display: none;">滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br>滚动内容<br></li>
+                    <li style="display: none;"><img src="images/placeholder-list.png" alt=""></li>
+                    <li style="display: none;"><img src="images/placeholder-page.png" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</div>

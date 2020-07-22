@@ -1,0 +1,53 @@
+﻿<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">
+            底部导航加载
+        </div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+        <!-- tab内容结构 -->
+        <div id="tabDynamic" class="bui-tab">
+            <div class="bui-tab-main">
+                <ul>
+                    <li id="tab1">
+                        <!-- 首页 -->
+                    </li>
+                    <li id="tab2" style="display: none;">
+                        <!-- 订单 -->
+                    </li>
+                    <li id="tab3" style="display: none;">
+                        <!-- 消息 -->
+                    </li>
+                    <li id="tab4" style="display: none;">
+                        <!-- 我的 -->
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <!-- tab菜单结构 -->
+        <ul id="tabDynamicNav" class="bui-nav">
+            <li class="bui-btn bui-box-vertical active"><i class="icon-home"><span class="bui-badges">5</span></i>
+                <div class="span1">首页</div>
+            </li>
+            <li class="bui-btn bui-box-vertical"><i class="icon-edit"></i>
+                <div class="span1">订单</div>
+            </li>
+            <li class="bui-btn bui-box-vertical"><i class="icon-chat"><span class="bui-badges"></span></i>
+                <div class="span1">消息</div>
+            </li>
+            <li class="bui-btn bui-box-vertical"><i class="icon-setting"></i>
+                <div class="span1">我的</div>
+            </li>
+        </ul>
+    </footer>
+</div>

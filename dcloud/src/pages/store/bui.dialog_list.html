@@ -1,0 +1,31 @@
+﻿<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">dialog打开</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+        <div class="container-xy bui-interval">
+            <div class="bui-btn btn-open" b-click="page.open">打开弹窗列表</div>
+            <div class="bui-btn btn-refresh" b-click="page.refresh">打开请求新地址列表</div>
+        </div>
+    </main>
+    <div id="uiDialog" class="bui-dialog">
+        <div class="bui-dialog-head">弹窗列表示例</div>
+        <div class="bui-dialog-main">
+            <div id="listStore" class="bui-scroll">
+                <div class="bui-scroll-head"></div>
+                <div class="bui-scroll-main">
+                    <ul class="bui-list" b-template="page.tplList(page.lists)" b-command="html">
+
+                    </ul>
+                </div>
+                <div class="bui-scroll-foot"></div>
+            </div>
+        </div>
+        <div class="bui-dialog-close"><i class="icon-close"></i></div>
+    </div>
+</div>

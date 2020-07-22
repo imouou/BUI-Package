@@ -1,67 +1,68 @@
 ﻿<style>
     /*选中的值右边对齐*/
+    
     .bui-select-form .bui-box .span1 {
         text-align: right;
     }
 </style>
 <div class="bui-page">
-	<header class="bui-bar">
-		<div class="bui-bar-left">
-			<a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
-		</div>
-		<div class="bui-bar-main">选择列表弹出</div>
-		<div class="bui-bar-right">
-		</div>
-	</header>
-	<main>
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">选择列表弹出</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
         <ul class="bui-list bui-select-form">
             <li class="bui-btn-title">动态初始化</li>
-            <li class="bui-btn bui-box" id="select" >
+            <li class="bui-btn bui-box" id="select">
                 <label>请选择区域</label>
                 <div class="span1"></div>
                 <i class="icon-listright"></i>
             </li>
             <li class="bui-btn-title">自定义选择列表</li>
-            <li class="bui-btn bui-box" id="select2" >
+            <li class="bui-btn bui-box" id="select2">
                 <label>请选择区域</label>
                 <div class="span1"></div>
                 <i class="icon-listright"></i>
             </li>
         </ul>
-	</main>
+    </main>
 </div>
 
 <!-- select 静态弹出自定义框 放在body层-->
-<div id="select-dialog" class="bui-dialog" style="display:none;" >
-  <div class="bui-dialog-head bui-box-align-middle">
-  	<div class="span1">请选择区域</div>
-  	<div id="makeSure" class="bui-btn primary round">确定</div>
-  </div>
-  <div class="bui-dialog-main">
-    <div class="bui-list">
-      <div class="bui-btn-title">
-      	南方
-      </div>
-      <div class="bui-btn bui-btn-line bui-box">
-        <div class="span1">广东</div>
-        <input id="check-1" type="checkbox" class="bui-choose" value="11" text="广东">
-      </div>
-      <div class="bui-btn bui-btn-line bui-box">
-        <div class="span1">广西</div>
-        <input id="check-2" type="checkbox" class="bui-choose" value="22" text="广西">
-      </div>
-      <div class="bui-btn-title">
-      	北方
-      </div>
-      <div class="bui-btn bui-btn-line bui-box">
-        <div class="span1">北京</div>
-        <input id="check-3" type="checkbox" class="bui-choose" value="33" text="北京">
-      </div>
-      <div class="bui-btn bui-btn-line bui-box">
-        <div class="span1">南京</div>
-        <input id="check-4" type="checkbox" class="bui-choose" value="44" text="南京">
-      </div>
-
+<div id="select-dialog" class="bui-dialog" style="display:none;">
+    <div class="bui-dialog-head bui-box-align-middle">
+        <div class="span1">请选择区域</div>
+        <div id="makeSure" class="bui-btn primary round">确定</div>
     </div>
-  </div>
+    <div class="bui-dialog-main">
+        <div class="bui-list">
+            <div class="bui-btn-title">
+                南方
+            </div>
+            <div class="bui-btn bui-btn-line bui-box">
+                <div class="span1">广东</div>
+                <input id="check-1" type="checkbox" class="bui-choose" value="11" text="广东">
+            </div>
+            <div class="bui-btn bui-btn-line bui-box">
+                <div class="span1">广西</div>
+                <input id="check-2" type="checkbox" class="bui-choose" value="22" text="广西">
+            </div>
+            <div class="bui-btn-title">
+                北方
+            </div>
+            <div class="bui-btn bui-btn-line bui-box">
+                <div class="span1">北京</div>
+                <input id="check-3" type="checkbox" class="bui-choose" value="33" text="北京">
+            </div>
+            <div class="bui-btn bui-btn-line bui-box">
+                <div class="span1">南京</div>
+                <input id="check-4" type="checkbox" class="bui-choose" value="44" text="南京">
+            </div>
+
+        </div>
+    </div>
 </div>

@@ -1,12 +1,12 @@
 ﻿loader.define(function(require,exports,module) {
-    
+
         // get
         var uiAjax = bui.ajax({
             url: siteDir + "userlist.json",
             // 可选参数
             method: "GET"
         })
-        
+
         // post
         var uiAjax2 = bui.ajax({
             url: siteDir+"versionUpdate.json",
@@ -46,7 +46,7 @@
         })
 
         $("#order").click(function() {
-            
+
             uiAjax3.then(function(res){
                 console.log(res);
             })
@@ -54,7 +54,7 @@
 
         // 相互依赖的请求
         $("#when").click(function() {
-            
+
             $.when(uiAjax,uiAjax3).then(function(res,res2){
                 console.log(res);
                 console.log(res2);
@@ -66,7 +66,7 @@
             var uiAjaxPut = bui.ajax({
                     url: siteDir + "userlist.json",
                     method: "PUT",
-                    // 强制使用web, BT的原生请求不支持Restful API的接口 
+                    // 强制使用web, BT的原生请求不支持Restful API的接口
                     native: false
                 }).then(function(res) {
                     console.log(res)

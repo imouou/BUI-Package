@@ -1,0 +1,31 @@
+﻿<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">属性绑定</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main class="container-xy">
+        <ul b-template="page.usertpl(page.userlist)" class="bui-list"></ul>
+        <!-- <b b-text="page.user"></b>
+        <b b-text="page.f.g"></b>
+        <b b-text="page.b"></b>
+
+        <b b-text="page.f.g"></b> -->
+        <!-- <div b-text="page.a.b.c"></div>
+        <div class="section-title">示例1: page.attrs.title 改变会改变属性</div>
+        <div class="section-title">绑定多个</div>
+        <p b-bind="page.attrs">绑定title属性,及自定义属性</p>
+        <div class="section-title">绑定1个</div>
+        <p b-bind="page.title">绑定title属性,及自定义属性</p>
+
+        <div class="section-title">示例2: {{}}这种渲染只渲染一次,并且需要设置, needStatic: true才会解析,会多做一次渲染, 所以建议尽量不开启.</div>
+        <div title="{{page.attrs.title}}">{{page.attrs.title}}</div>
+
+        <input b-bind="page.disabled" placeholder="不可以输入" type="text">
+        <input b-bind="page.prop.disabled" type="checkbox" b-model="page.prop.checked">
+        <img src="images/applogo.png" b-src="page.image"> -->
+    </main>
+</div>

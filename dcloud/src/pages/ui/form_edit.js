@@ -9,6 +9,20 @@
         }
     })
 
+    var uiDropdown = bui.dropdown({
+        id: "#uiDropdown",
+        data: [{
+            name: "广州",
+            value: "广州"
+        }, {
+            name: "广州2",
+            value: "广州2"
+        }],
+        //设置relative为false,二级菜单继承父层宽度
+        relative: false,
+        callback: function(e) {}
+    });
+
     // 密码显示或者隐藏
     var password = bui.input({
             id: "#passwordInput",
@@ -42,7 +56,7 @@
             var valWithZero = e.count < 10 ? "0" + e.count : e.count;
             $btnSend.text(valWithZero + "后重新获取");
         },
-        times: 10
+        time: 10
     });
 
     $btnSend.on("click", function(argument) {
@@ -124,12 +138,13 @@
     });
 
     // 评论字数
-    bui.input({
+    var comment = bui.input({
         id: "#commentContent",
         showLength: true,
         showIcon: false,
         maxLength: 100
     })
+
 
     // $('.bui-input').on('click', function () {
     //        var target = this;
@@ -211,15 +226,19 @@
     });
     selectList4.on("change", function() {
 
-        var val = selectList4.text();
+            var val = selectList4.text();
 
-        $("#selectList4-value").text(val)
-    })
-
-    // 修复ios 光标跟着一起滚动问题
+            $("#selectList4-value").text(val)
+        })
+        // 修复ios 光标跟着一起滚动问题, 微信IOS版,在失去焦点以后,需要调用一次 this.scrollIntoView ,可以解决底部灰色问题
     if (bui.platform.isIos()) {
         router.$("main").on("scroll", function() {
             $('input').toggleClass('focus-fixed');
+        })
+
+        // 
+        router.$('input[type="text"],textarea').on("blur", function() {
+            this.scrollIntoView(false)
         })
     }
 })

@@ -1,25 +1,23 @@
 @charset "utf-8";
-
 .page-home {
     .intro {
         color: #fff;
         padding: .3rem;
-        background:linear-gradient(215deg,rgba(51,195,255,1) 0%,rgba(77,127,237,1) 100%);
-      h1 {
-        font-size: .58rem;
-        margin-bottom: .1rem;
-      }
-      p {
-        font-size: .26rem;
-        letter-spacing: 1px;
-        font-weight: 300;
-      }
+        background: linear-gradient(215deg, rgba(51, 195, 255, 1) 0%, rgba(77, 127, 237, 1) 100%);
+        h1 {
+            font-size: .58rem;
+            margin-bottom: .1rem;
+        }
+        p {
+            font-size: .26rem;
+            letter-spacing: 1px;
+            font-weight: 300;
+        }
     }
-    
-    main .bui-accordion{
+    main .bui-accordion {
         border-top: 0;
     }
-    main > .bui-list{
+    main>.bui-list {
         .bui-btn {
             padding-left: .4rem;
         }
@@ -30,13 +28,10 @@
         }
         dd {
             background: #fff;
-
             padding-left: .5rem;
             padding-right: 0;
-            
         }
     }
-    
     .bui-nav {
         li {
             background: none;
@@ -55,7 +50,7 @@
         .bui-btn {
             color: #666;
         }
-        > .bui-btn {
+        >.bui-btn {
             color: #666;
         }
         .active {
@@ -87,13 +82,17 @@
     }*/
 }
 
+
 /* sidebar 示例样式*/
-.bui-sidebar img{
+
+.bui-sidebar img {
     width: 100%;
 }
-.bui-sidebar-wrap .bui-page main{
+
+.bui-sidebar-wrap .bui-page main {
     background: #fff;
 }
+
 .menu {
     margin: .2rem;
     display: inline-block;
@@ -105,7 +104,10 @@
     line-height: .6rem;
     text-align: center;
 }
+
+
 /*激活颜色修改*/
+
 .menu.active {
     background: red;
 }
@@ -118,10 +120,12 @@
     margin-top: 1rem;
     text-align: center;
 }
+
 .placeholder img {
     width: 1.4rem;
     margin: 0 auto .3rem auto;
 }
+
 .placeholder-text {
     width: 5.6rem;
     margin: 0 auto;
@@ -130,6 +134,7 @@
     border-radius: .3rem;
     padding: .3rem;
 }
+
 .placeholder-text h3 {
     color: #333;
     font-size: .4rem;
@@ -143,11 +148,13 @@
 .bui-list-thumbnail .bui-btn {
     border-bottom: 0;
 }
-.price i{
+
+.price i {
     font-size: .2rem;
     font-style: normal;
     margin-right: .05rem;
 }
+
 .price {
     font-size: .36rem;
     color: #FF6701;
@@ -155,10 +162,11 @@
 
 .controls-btn {
     background: #fff;
-    margin:0;
+    margin: 0;
     padding: .3rem .2rem;
     border-top: 1px solid #efefef;
 }
+
 .controls-btn .bui-btn {
     margin-bottom: .2rem;
 }

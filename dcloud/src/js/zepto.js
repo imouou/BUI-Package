@@ -645,7 +645,7 @@ var Zepto = (function() {
         toggle: function(setting) {
             return this.each(function() {
                 var el = $(this);
-                (setting === undefined ? el.css("display") == "none" : setting) ? el.show() : el.hide()
+                (setting === undefined ? el.css("display") == "none" : setting) ? el.show(): el.hide()
             })
         },
         prev: function(selector) {
@@ -793,7 +793,7 @@ var Zepto = (function() {
                     names = funcArg(this, name, idx, className(this))
                 names.split(/\s+/g).forEach(function(klass) {
                     (when === undefined ? !$this.hasClass(klass) : when) ?
-                        $this.addClass(klass) : $this.removeClass(klass)
+                    $this.addClass(klass): $this.removeClass(klass)
                 })
             })
         },
@@ -972,7 +972,7 @@ var Zepto = (function() {
     }
 
     detect.call($, navigator.userAgent)
-    // make available to unit tests
+        // make available to unit tests
     $.__detect = detect
 
 })(Zepto)
@@ -1038,7 +1038,7 @@ var Zepto = (function() {
             var handler = parse(event)
             handler.fn = fn
             handler.sel = selector
-            // emulate mouseenter, mouseleave
+                // emulate mouseenter, mouseleave
             if (handler.e in hover) fn = function(e) {
                 var related = e.relatedTarget
                 if (!related || (related !== this && !$.contains(this, related)))
@@ -1048,13 +1048,11 @@ var Zepto = (function() {
             var callback = handler.del || fn
             handler.proxy = function(e) {
                 var result = callback.apply(element, [e].concat(e.data))
-
                 if (result === false) e.preventDefault(), e.stopPropagation()
                 return result
             }
             handler.i = set.length
             set.push(handler)
-
             element.addEventListener(realEvent(handler.e), handler.proxy, eventCapture(handler, capture))
         })
     }
@@ -1162,7 +1160,6 @@ var Zepto = (function() {
                             currentTarget: match,
                             liveFired: element
                         })
-
                         return fn.apply(match, [evt].concat([].slice.call(arguments, 1)))
                     }
                 }
@@ -1343,8 +1340,8 @@ var Zepto = (function() {
             },
             abort = function(type) {
                 cleanup()
-                // In case of manual abort or timeout, keep an empty function as callback
-                // so that the SCRIPT tag that eventually loads won't result in an error.
+                    // In case of manual abort or timeout, keep an empty function as callback
+                    // so that the SCRIPT tag that eventually loads won't result in an error.
                 if (!type || type == 'timeout') window[callbackName] = empty
                 ajaxError(null, type || 'abort', xhr, options)
             },
@@ -1710,7 +1707,7 @@ var Zepto = (function() {
             endEvent = $.fx.animationEnd
         } else {
             cssProperties = []
-            // CSS transitions
+                // CSS transitions
             for (key in properties)
                 if (supportedTransforms.test(key)) transforms += key + '(' + properties[key] + ') '
                 else cssValues[key] = properties[key], cssProperties.push(dasherize(key))
@@ -1893,9 +1890,9 @@ var Zepto = (function() {
                             var index
                             while ((index = $.inArray(arg, list, index)) > -1) {
                                 list.splice(index, 1)
-                                // Handle firing indexes
+                                    // Handle firing indexes
                                 if (firing) {
-                                    if (index <= firingLength)--firingLength
+                                    if (index <= firingLength) --firingLength
                                 }
                             }
                         })
@@ -2236,8 +2233,11 @@ var Zepto = (function() {
 //     $.fn[eventName] = function(callback){ return this.on(eventName, callback) }
 //   })
 // })(Zepto)
-var $ = Zepto;
+window.$ = Zepto;
+
+// 没jQuery的时候,jQuery就是Zepto
 if (!window.jQuery) {
+    window.$ = Zepto;
     window.jQuery = Zepto;
 }
 //jQuery = Zepto;

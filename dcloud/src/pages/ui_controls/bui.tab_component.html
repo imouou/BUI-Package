@@ -1,0 +1,46 @@
+﻿<div class="bui-page bui-box-vertical">
+    <header>
+        <div class="bui-bar">
+            <div class="bui-bar-left">
+                <div class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></div>
+            </div>
+            <div class="bui-bar-main">
+                组件按需加载
+            </div>
+            <div class="bui-bar-right">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="uiTab" class="bui-tab bui-box-vertical">
+            <div class="bui-tab-head">
+                <ul class="bui-nav">
+                    <li class="bui-btn">新闻</li>
+                    <li class="bui-btn">图片</li>
+                    <li class="bui-btn">视频</li>
+                    <li class="bui-btn">课程</li>
+                </ul>
+            </div>
+            <div class="bui-tab-main">
+                <ul>
+                    <li>
+                        <!-- 新闻轮播图 默认编译 -->
+                        <component id="tab0" name="pages/components/list/index" type="news"></component>
+                    </li>
+                    <li style="display: none;">
+                        <!-- 图片轮播图延迟 暂不编译 -->
+                        <component id="tab1" name="pages/components/list/index" type="photo" delay="true"></component>
+                    </li>
+                    <li style="display: none;">
+                        <!-- 视频轮播图延迟 暂不编译 -->
+                        <component id="tab2" name="pages/components/list/index" type="video" delay="true"></component>
+                    </li>
+                    <li style="display: none;">
+                        <!-- 视频轮播图延迟 暂不编译 -->
+                        <component id="tab3" name="pages/components/list/index" type="class" delay="true"></component>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</div>

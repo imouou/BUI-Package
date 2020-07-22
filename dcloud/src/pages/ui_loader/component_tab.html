@@ -1,0 +1,33 @@
+<div class="bui-page bui-box-vertical">
+    <header>
+        <div class="bui-bar">
+            <div class="bui-bar-left">
+                <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+            </div>
+            <div class="bui-bar-main">待办已办</div>
+            <div class="bui-bar-right">
+            </div>
+        </div>
+        <component name="pages/components/searchbar/index"></component>
+    </header>
+    <main class="bui-scroll-hide">
+        <div id="uiTab" class="bui-tab bui-box-vertical">
+            <div class="bui-tab-head">
+                <ul class="bui-nav">
+                    <li class="bui-btn">待办</li>
+                    <li class="bui-btn">已办</li>
+                </ul>
+            </div>
+            <div class="bui-tab-main">
+                <ul>
+                    <li>
+                        <component id="list0" name="pages/components/list/index" type="todo"></component>
+                    </li>
+                    <li style="display: none;">
+                        <component id="list1" name="pages/components/list/index" delay="true" type="done"></component>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</div>

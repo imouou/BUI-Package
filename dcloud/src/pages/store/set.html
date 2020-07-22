@@ -1,0 +1,24 @@
+﻿
+<div class="bui-page page-store">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">设置值</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+
+        <div class="section-title">1.设置文本,支持对象</div>
+        <p b-text="page.attrs.title"></p>
+        <p b-text="page.attrs.test.title"></p>
+
+        <div class="section-title">2.设置Html</div>
+        <div b-html="page.title"></div>
+
+        <div class="section-title">3.设置value</div>
+        <input b-value="page.value" class="bui-input"/>
+
+    </main>
+</div>

@@ -4,7 +4,9 @@
 
     loader.import(["js/platform/cordova.js","js/platform/bingotouch.js"],function(){
 
-        var uiFile = bui.file();
+        var uiFile = bui.file({
+          needNative: true
+        });
 
         // 创建download文件夹
         $("#createFolder").on("click",function (argument) {
@@ -68,8 +70,8 @@
             uiFile.getFile({
                 folderName: "download",
                 fileName: "bui.jpg",
-                onSuccess: function (data) { 
-                    
+                onSuccess: function (data) {
+
                     // // 打开图片
                     this.open({
                         url: data.fullPath

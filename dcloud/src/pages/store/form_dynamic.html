@@ -1,0 +1,20 @@
+﻿<div class="bui-page page-store page-input">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">动态表单</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+        <div class="bui-btn" b-click="page.add"><i class="icon-plus"></i>添加</div>
+        <div b-template="page.tplUser(page.users)">
+
+        </div>
+
+        <div class="container-xy">
+            <button class="bui-btn primary round" b-click="page.submitForm">提交</button>
+        </div>
+    </main>
+</div>

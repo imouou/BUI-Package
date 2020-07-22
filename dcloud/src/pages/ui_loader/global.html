@@ -1,0 +1,30 @@
+<style>
+    .container-full {
+        background: red;
+    }
+</style>
+<div class="bui-page bui-box-vertical">
+    <header>
+        <div class="bui-bar">
+            <div class="bui-bar-left">
+                <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+            </div>
+            <div class="bui-bar-main">定义模块的全局方法</div>
+            <div class="bui-bar-right">
+                <!-- 右边按钮 -->
+            </div>
+        </div>
+    </header>
+    <!-- 选项卡 html 对应的结构: 分别替换main,footer标签, 如果main有其它内容,则复制bui-tab的结构-->
+    <main>
+        <!-- 上拉菜单 html 对应的结构: -->
+        1. 定义全局方法 common.js
+        <xmp>
+            loader.global(function() { return { test: function(){ console.log("test") }, test2: function(){ console.log("test") } } })
+        </xmp>
+        2. 调用在第4个参数 js:
+        <xmp>
+            loader.define(function(require, exports, module, global) { // 调用 global.test() })
+        </xmp>
+    </main>
+</div>

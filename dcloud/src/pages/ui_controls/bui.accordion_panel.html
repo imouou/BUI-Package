@@ -1,39 +1,57 @@
-﻿
-<div class="bui-page">
-	<header class="bui-bar">
-		<div class="bui-bar-left">
-			<a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
-		</div>
-		<div class="bui-bar-main">折叠面板</div>
-		<div class="bui-bar-right">
-		</div>
-	</header>
-	<main>
-		<!-- 控件结构 -->
-		<div class="bui-panel">
-			<div class="bui-panel-head bui-box-center"><div class="span1">京东服务</div><i class="icon-accordion"></i></div>
-			<div class="bui-panel-main">
-				<!-- 示例搜索过滤 -->
-				<div class="bui-filter bui-fluid-space-3">
-				    <div class="span1">
-				        <input class="bui-check" type="radio" name="service" uncheck="京东物流" check="京东物流" checked>
-				    </div>
-				    <div class="span1">
-				    	<input class="bui-check" type="radio" name="service" uncheck="货到付款" check="货到付款">
-				    </div>
-				    <div class="span1">
-				    	<input class="bui-check" type="radio" name="service" uncheck="仅看有货" check="仅看有货">
-				    </div>
-				    <div class="span1">
-				    	<input class="bui-check" type="radio" name="service" uncheck="促销" check="促销">
-				    </div>
-				    <div class="span1">
-				    	<input class="bui-check" type="radio" name="service" uncheck="新品" check="新品">
-				    </div>
-				</div>
-			</div>
-		</div>
-
-
-	</main>
+﻿<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">过滤筛选</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+        <div class="bui-interval">
+            <!-- 控件结构 -->
+            <div class="bui-panel">
+                <div class="bui-panel-head bui-box-center">
+                    <div class="span1">物流服务</div><i class="icon-accordion"></i></div>
+                <div class="bui-panel-main">
+                    <!-- 示例搜索过滤 -->
+                    <div class="bui-filter bui-fluid-space-3">
+                        <div class="span1">
+                            <input class="bui-check" type="radio" name="service" uncheck="京东物流" check="京东物流" value="jingdong" checked>
+                        </div>
+                        <div class="span1">
+                            <input class="bui-check" type="radio" name="service" uncheck="货到付款" check="货到付款" value="huodao">
+                        </div>
+                        <div class="span1">
+                            <input class="bui-check" type="radio" name="service" uncheck="信用卡" check="信用卡" value="xinyong">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bui-panel">
+                <div class="bui-panel-head bui-box-center">
+                    <div class="span1">选购类型</div><i class="icon-accordion"></i></div>
+                <div class="bui-panel-main">
+                    <!-- 示例搜索过滤 -->
+                    <div class="bui-filter bui-fluid-space-3">
+                        <div class="span1">
+                            <input class="bui-check" type="radio" name="type" uncheck="热门" check="热门" value="remen">
+                        </div>
+                        <div class="span1">
+                            <input class="bui-check" type="radio" name="type" uncheck="促销" check="促销" value="cuxiao">
+                        </div>
+                        <div class="span1">
+                            <input class="bui-check" type="radio" name="type" uncheck="新品" check="新品" value="xinpin">
+                        </div>
+                        <div class="span1">
+                            <input class="bui-check" type="radio" name="type" uncheck="排行" check="排行" value="paihang">
+                        </div>
+                        <div class="span1">
+                            <input class="bui-check" type="radio" name="type" uncheck="三合一" check="三合一" value="sanheyi">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </div>

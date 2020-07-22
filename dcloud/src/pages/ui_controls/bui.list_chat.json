@@ -1,0 +1,52 @@
+{
+    "status": "200",
+    "data": [{
+        "uid": "1",
+        "name": "用户1",
+        "image": "images/face.png",
+        "content": "BUI是什么呢?",
+        "time": "2020-03-02 11:00"
+    }, {
+        "uid": "2",
+        "name": "BUI",
+        "image": "images/applogo.png",
+        "content": "BUI 是用来快速构建界面交互的UI框架, 专注webapp开发, 开发者只需关注业务的开发, 界面的布局及交互交给BUI, 开发出来的应用, 可以嵌入平台 ( 微信公众号, 微信小程序webview, 钉钉, 淘宝, 支付宝等 ), 亦可以跟其它第三方平台打包成独立应用( Bingotouch , Cordova , Dcloud , APICloud , Appcan 等), 最终可以全跨平台展示.",
+        "time": "2020-03-02 11:05"
+    }, {
+        "uid": "1",
+        "name": "用户1",
+        "image": "images/face.png",
+        "content": "BUI可以打包成独立运行的APP吗?",
+        "time": "2020-03-02 11:07"
+    }, {
+        "uid": "2",
+        "name": "BUI",
+        "image": "images/applogo.png",
+        "content": "BUI本身是跨平台的UI框架,不具备独立打包的能力,但可以结合第三方平台, 比方Dcloud,APICloud等平台,打包成独立安装的APK或者IOS, 具体可以查看第三方平台的使用规范",
+        "time": "2020-03-02 11:05"
+    }, {
+        "uid": "1",
+        "name": "用户1",
+        "image": "images/face.png",
+        "content": "开发BUI需要重新学习吗?",
+        "time": "2020-03-02 11:05"
+    }, {
+        "uid": "2",
+        "name": "BUI",
+        "image": "images/applogo.png",
+        "content": "BUI的上手成本极低,但基本的文档及开发规范是要看的, 需要具备基础的HTML,CSS,JS等基础便可开发, 面向美工,后端,前端等群体用户",
+        "time": "2020-03-02 11:05"
+    }, {
+        "uid": "1",
+        "name": "用户1",
+        "image": "images/face.png",
+        "content": "单页路由还是多页路由好?",
+        "time": "2020-03-02 11:05"
+    }, {
+        "uid": "2",
+        "name": "BUI",
+        "image": "images/applogo.png",
+        "content": "多页路由跟正常的Web开发一样,上手最简单,但多页不能有切换动画,体验上不如单页路由, 单页路由保持跟多页路由一致的开发方式, 便于两者之间方便切换, 单页路由需要好好理解模板跟模块之间的关系.",
+        "time": "2020-03-02 11:05"
+    }]
+}

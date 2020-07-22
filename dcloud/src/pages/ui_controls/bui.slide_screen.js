@@ -1,9 +1,10 @@
-﻿loader.define(function(require,exports,module) {
+﻿loader.define(function(require, exports, module) {
 
     // 快速初始化
     var uiSlide = bui.slide({
-        id:"#slideScreen",
-        fullscreen:true,
-        direction:"y"
+        id: "#slideScreen",
+        fullscreen: true,
+        zoom: false,
+        direction: "y"
     })
 })

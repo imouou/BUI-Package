@@ -1,80 +1,123 @@
 ﻿<style>
-	.bui-dialog img{
-		width: 100%;
-	}
-	/*右边全屏可以控制距离左边位置*/
-	#dialogRight {
-		left: 10%;
-	}
-	/*右边全屏可以控制距离左边位置*/
-	#dialogLeft {
-		right: 10%;
-	}
+    .bui-dialog img {
+        width: 100%;
+    }
+    /*右边全屏可以控制距离左边位置*/
+    
+    #dialogLeft {
+        right: 10%;
+    }
 </style>
 <div class="bui-page">
-	<header class="bui-bar">
-		<div class="bui-bar-left">
-			<a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
-		</div>
-		<div class="bui-bar-main">自定义对话框</div>
-		<div class="bui-bar-right">
-		</div>
-	</header>
-	<main>
-		<div class="bui-box-space container-y">
-			<div class="span1"><div id="btnOpen" class="bui-btn">打开居中对话框</div></div>
-			<div class="span1"><div id="btnOpenDown" class="bui-btn">打开底部对话框</div></div>
-		</div>
-		<div class="bui-box-space container-y">
-			<div class="span1"><div id="btnOpenLeft" class="bui-btn">打开左边对话框</div></div>
-			<div class="span1"><div id="btnOpenFilter" class="bui-btn">打开右边对话框</div></div>
-		</div>
-		<img src="images/placeholder-page.png" alt="占位图">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">自定义对话框</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+        <div class="bui-box-space container-y">
+            <div class="span1">
+                <div id="btnOpen" class="bui-btn">打开居中对话框</div>
+            </div>
+            <div class="span1">
+                <div id="btnOpenDown" class="bui-btn">打开底部对话框</div>
+            </div>
+        </div>
+        <div class="bui-box-space container-y">
+            <div class="span1">
+                <div id="btnOpenLeft" class="bui-btn">打开左边对话框</div>
+            </div>
+            <div class="span1">
+                <div id="btnOpenFilter" class="bui-btn">打开右边对话框</div>
+            </div>
+        </div>
+        <div class="bui-box-space container-y">
+            <div class="span1">
+                <div id="btnOpenFull" class="bui-btn">打开全屏对话框</div>
+            </div>
+        </div>
+        <img src="images/placeholder-page.png" alt="占位图">
 
-	</main>
+    </main>
 </div>
 
 <!-- 右边自定义对话框结构 -->
-<div id="dialogRight" class="bui-dialog" style="display:none;" >
-  <div class="bui-dialog-head bui-box-align-middle">
-  	<div class="span1">请选择区域</div>
-  	<div id="makeSure" class="bui-btn primary round">确定</div>
-  </div>
-  <div class="bui-dialog-main">
-    <img src="images/placeholder-list.png" alt="占位图">
-  </div>
+<div id="dialogRight" class="bui-dialog" style="display:none;">
+    <div class="bui-dialog-head bui-box-align-middle">
+        <div class="span1">请选择区域</div>
+        <div id="makeSure" class="bui-btn primary round">确定</div>
+    </div>
+    <div class="bui-dialog-main">
+        <img src="images/placeholder-list.png" alt="占位图">
+    </div>
 </div>
 
 <!-- 左边自定义对话框结构 -->
-<div id="dialogLeft" class="bui-dialog" style="display:none;" >
-  <div class="bui-dialog-head bui-box-align-middle">
-  	<div class="span1">请选择区域</div>
-  	<div id="makeSure2" class="bui-btn primary round">确定</div>
-  </div>
-  <div class="bui-dialog-main">
-    <img src="images/placeholder-list.png" alt="占位图">
-  </div>
+<div id="dialogLeft" class="bui-dialog" style="display:none;">
+    <div class="bui-dialog-head bui-box-align-middle">
+        <div class="span1">请选择区域</div>
+        <div id="makeSure2" class="bui-btn primary round">确定</div>
+    </div>
+    <div class="bui-dialog-main">
+        <img src="images/placeholder-list.png" alt="占位图">
+    </div>
 </div>
 
 <!-- 中间自定义弹出框结构	 -->
 <div id="dialogCenter" class="bui-dialog" style="display: none;">
-	<div class="bui-dialog-head">隐私说明</div>
-	<div class="bui-dialog-main">
-		<img src="images/placeholder-page.png" alt="占位图">
-	</div>
-	<div class="bui-dialog-foot">
-		<div class="bui-box">
-			<div class="span1"><div class="bui-btn">取消</div></div>
-			<div class="span1"><div class="bui-btn blue">确定</div></div>
-		</div>
-	</div>
-	<div class="bui-dialog-close"><i class="icon-close"></i></div>
+    <div class="bui-dialog-head">隐私说明</div>
+    <div class="bui-dialog-main">
+        <img src="images/placeholder-page.png" alt="占位图">
+    </div>
+    <div class="bui-dialog-foot">
+        <div class="bui-box">
+            <div class="span1">
+                <div class="bui-btn">取消</div>
+            </div>
+            <div class="span1">
+                <div class="bui-btn blue">确定</div>
+            </div>
+        </div>
+    </div>
+    <div class="bui-dialog-close"><i class="icon-close"></i></div>
 </div>
 <!-- 底部弹出框	 -->
 <div id="dialogDown" class="bui-dialog" style="display: none;">
-	<div class="bui-dialog-head">隐私说明</div>
-	<div class="bui-dialog-main">
-		<img src="images/placeholder-page.png" alt="占位图">
-	</div>
-	<div class="bui-dialog-close"><i class="icon-close"></i></div>
+    <div class="bui-dialog-head">隐私说明</div>
+    <div class="bui-dialog-main">
+        <img src="images/placeholder-page.png" alt="占位图">
+    </div>
+    <div class="bui-dialog-foot">
+        <div class="bui-box">
+            <div class="span1">
+                <div class="bui-btn">取消</div>
+            </div>
+            <div class="span1">
+                <div class="bui-btn blue">确定</div>
+            </div>
+        </div>
+    </div>
+    <div class="bui-dialog-close"><i class="icon-close"></i></div>
+</div>
+<!-- 全屏弹出框	 -->
+<div id="dialogFull" class="bui-dialog" style="display: none;">
+    <div class="bui-dialog-head">隐私说明</div>
+    <div class="bui-dialog-main">
+        <img src="images/placeholder-page.png" alt="占位图">
+        <img src="images/placeholder-page.png" alt="占位图">
+    </div>
+    <div class="bui-dialog-foot">
+        <div class="bui-box">
+            <div class="span1">
+                <div class="bui-btn">取消</div>
+            </div>
+            <div class="span1">
+                <div class="bui-btn blue">确定</div>
+            </div>
+        </div>
+    </div>
+    <div class="bui-dialog-close"><i class="icon-close"></i></div>
 </div>

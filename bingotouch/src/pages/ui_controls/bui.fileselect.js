@@ -3,10 +3,12 @@
     var $output = $("#output");
 
     loader.import(["js/platform/cordova.js","js/platform/bingotouch.js"],function(){
-    
-        var uiFileSelect = bui.fileselect();
-        
-        
+
+        var uiFileSelect = bui.fileselect({
+          needNative: true
+        });
+
+
         // 选择图片文件
         $("#select").on("click",function (argument) {
 
@@ -37,7 +39,7 @@
         // 删除选择的文件
         $("#removeSelect").on("click",function (argument) {
 
-            // 安卓选择后的文件名会自动改名为 resize.jpg 
+            // 安卓选择后的文件名会自动改名为 resize.jpg
             uiFileSelect.remove("resize.jpg");
 
         })

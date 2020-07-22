@@ -1,29 +1,45 @@
 ﻿loader.define(function(require, exports, module) {
 
-    //按钮在tab外层,需要传id
-    var tab = bui.tab({
-        id: "#tabDynamic",
-        // 1: 声明是动态加载的tab
-        autoload: true,
-    })
+    var pageview = {
+        init: function() {
+            // html:
+            // <div id="uiTabHead" class="bui-tab"></div>
+            var uiTabHead = bui.tab({
+                id: "#uiTabHead",
+                position: "top",
+                iconPosition: "left",
+                data: [{
+                    id: "uiTabHead0",
+                    icon: "icon-menu",
+                    title: "课程",
+                    name: "pages/ui_controls/bui.tab_dynamic_page1",
+                    param: { type: "news" }
+                }, {
+                    id: "uiTabHead1",
+                    icon: "icon-menu",
+                    title: "观点",
+                    name: "pages/ui_controls/bui.tab_dynamic_page2",
+                    param: { type: "photo" },
+                }, {
+                    id: "uiTabHead2",
+                    icon: "icon-menu",
+                    title: "专访",
+                    name: "pages/ui_controls/bui.tab_dynamic_page1",
+                    param: { type: "photo" },
+                }, {
+                    id: "uiTabHead3",
+                    icon: "icon-menu",
+                    title: "公开课",
+                    name: "pages/ui_controls/bui.tab_dynamic_page2",
+                    param: { type: "photo" },
+                }]
+            })
 
-    // 2: 监听加载后的事件, load 只加载一次
-    tab.on("to", function(index) {
-        switch (index) {
-            case 0:
-                loader.require(["pages/ui_controls/bui.tab_dynamic_page1"])
-                break;
-            case 1:
-                // 这里是加载脚本第一次的时候触发
-                loader.require(["pages/ui_controls/bui.tab_dynamic_page2"])
-                break;
-            case 2:
-                loader.require(["pages/ui_controls/bui.tab_dynamic_page1"])
-                break;
-            case 3:
-                loader.require(["pages/ui_controls/bui.tab_dynamic_page1"])
-                break;
+            uiTabHead.addBadge(1, 5)
+            uiTabHead.addBadge(1, 3)
+                // uiTabHead.removeBadge()
         }
-    }).to(0)
-
+    }
+    pageview.init();
+    return pageview;
 })

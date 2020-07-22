@@ -1,0 +1,48 @@
+﻿<style>
+    .bui-select-form {
+        margin-bottom: .2rem;
+    }
+    
+    .bui-select-form .bui-input {
+        text-align: right;
+    }
+</style>
+<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">日期控件</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+        <ul class="bui-list bui-select-form">
+            <li class="bui-btn bui-box">
+                <label>请选择日期</label>
+                <div class="span1"><input type="text" id="datepicker_input" readonly class="bui-input"></div>
+                <i class="icon-listright"></i>
+            </li>
+        </ul>
+
+        <div class="bui-" style="height: 300px;">
+            <div class="bui-dialog-head">对话框标题</div>
+            <div class="bui-dialog-main">
+                <div class="bui-box">
+                    <div class="span1">开始日期:<span class="startvalue"></span></div>
+                    <div class="span1">结束日期:<span class="value"></span></div>
+                </div>
+                <div class="bui-box">
+                    <div class="span1">
+                        <div id="pickergroupstart"></div>
+                    </div>
+                    <div class="span1">
+                        <div id="pickergroupend"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="bui-dialog-close"><i class="icon-close"></i></div>
+        </div>
+</div>
+</main>
+</div>

@@ -1,0 +1,64 @@
+﻿<style>
+    .page-checkbox .active {
+        color: red;
+    }
+</style>
+<div class="bui-page page-store page-checkbox">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">多选单选</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+
+        <div class="section-title">控制状态显示隐藏</div>
+
+
+        <span b-show="page.show" style="display:inline-block;">我是A,被控制的内容</span>
+        <div b-show="page.show" class="bui-box">
+            <div class="span1">我是C,被控制的内容,支持box布局</div><i class="icon-listright"></i></div>
+        <p b-show="!page.show">我是B,跟A相反的状态</p>
+
+        <label><input type="checkbox" b-model="page.show" />点击可以控制A和B: <span b-text="page.show"></span></label>
+
+
+        <div class="section-title">多选: 城市: <span b-text="page.citys"></span></div>
+        <!-- 有value 的时候拿value, 没value拿布尔值 -->
+        <label><input type="checkbox" name="city" value="广州" b-model="page.citys">广州</label>
+        <label><input type="checkbox" name="city" value="汕头" b-model="page.citys">汕头</label>
+        <label><input type="checkbox" name="city" value="深圳" b-model="page.citys">深圳</label>
+        <label><input type="checkbox" name="city" value="东莞" b-model="page.citys">东莞</label>
+
+
+        <div class="section-title">单选: 性别: <span b-text="page.sex"></span> </div>
+        <label><input type="radio" name="sex" value="男" b-model="page.sex">男</label>
+        <label><input type="radio" name="sex" value="女" b-model="page.sex">女</label>
+
+
+        <div class="section-title">单选: 对象: <span b-text="page.user"></span> 值: <span b-text="page.name"></span> </div>
+        <!-- 注意: value 是单引号 -->
+        <label><input type="radio" name="user" value='{"name":"bui"}' b-model="page.user">bui</label>
+        <label><input type="radio" name="user" value='{"name":"easy"}' b-model="page.user">easy</label>
+
+        <div class="section-title">多选: 对象: <span b-text="page.users"></span> 值: <span b-text="page.names"></span> </div>
+        <!-- 注意: value 是单引号 -->
+        <label><input type="checkbox" name="user2" value='{"name":"bui"}' b-model="page.users">bui</label>
+        <label><input type="checkbox" name="user2" value='{"name":"easy"}' b-model="page.users">easy</label>
+
+        <b b-class="page.active">有选中的时候,样式为激活样式</b>
+
+        <div class="section-title">checkbox 联动更改</div>
+
+        <label><input type="checkbox" name="city" value="广州" b-model="page.citys">广州</label>
+        <label><input type="checkbox" name="city2" b-model="page.test.hasCheck">对象字段</label>
+
+        <div class="section-title">取check-value uncheck-value的值</div>
+        <!-- value 保持跟 check一致 -->
+        <input type="checkbox" class="bui-switch-text" name="" value="ON" uncheck="OFF" check="ON" b-model="page.hascheck">
+        <input type="checkbox" class="bui-switch-text" name="" value="you" uncheck="无" check="有" uncheck-value="wu" check-value="you" b-model="page.has">
+
+    </main>
+</div>

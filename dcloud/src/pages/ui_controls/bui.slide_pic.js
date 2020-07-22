@@ -3,7 +3,7 @@
     // 快速初始化
     var uiSlide = bui.slide({
         id:"#slidePic",
-        height:120
+        height:300
     })
 
     router.$("#prev").on("click",function () {

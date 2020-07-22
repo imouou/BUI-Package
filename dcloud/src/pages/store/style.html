@@ -1,0 +1,39 @@
+﻿<style type="text/css">
+    .tab.active {
+        color: orange;
+    }
+</style>
+<div class="bui-page page-store">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">样式绑定</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+
+        <div class="section-title">Class 绑定</div>
+        <div class="section-title">1.绑定多个,支持对象</div>
+        <p b-class="page.tabClass" class="tab">tabClass是一个对象,键值为样式名</p>
+        <div class="section-title">1.1 绑定层级里面的某个值</div>
+        <p b-class="page.tabClass.active" class="tab">tabClass是一个对象,键值为样式名</p>
+
+        <div class="section-title">2.绑定多个,支持数组</div>
+        <p b-class="page.tabClassNames">tabClassNames是数组,键值为样式名</p>
+
+        <div class="section-title">3.绑定单个,支持布尔值</div>
+        <p b-class="page.active" class="tab">active 是一个布尔值</p>
+
+        <div class="section-title">4.绑定单个,支持字符串</div>
+        <p b-class="page.activeClass" class="tab sbc">activeClass 是一个字符串</p>
+
+
+        <div class="section-title">Style 绑定</div>
+        <div class="section-title" b-title="page.activeClass">1.绑定1个</div>
+        <p b-style="page.color">绑定title属性,查看源码才能看到</p>
+        <div class="section-title">2.绑定多个</div>
+        <p b-style="page.styles">绑定title属性,查看源码才能看到</p>
+    </main>
+</div>

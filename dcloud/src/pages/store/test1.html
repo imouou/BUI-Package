@@ -1,0 +1,41 @@
+﻿<style>
+    .page-checkbox .active {
+        color: red;
+    }
+    
+    .page-checkbox .hasList2,
+    .page-checkbox .hasList {
+        color: red;
+    }
+</style>
+<div class="bui-page page-store page-checkbox">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">多选单选</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+
+        <div class="section-title">多选: 对象: <span b-text="page.users"></span> </div>
+        <!-- 注意: value 是单引号 -->
+        <label><input type="checkbox" name="user2" value='{"name":"bui"}' b-model="page.users">bui</label>
+        <label><input type="checkbox" name="user2" value='{"name":"easy"}' b-model="page.users">easy</label>
+
+        <p><b b-class="page.active">一级数组可以通过读取this.list.length触发样式的设置</b></p>
+
+        <label><input type="checkbox" name="user3" value='easy' b-model="page.test.list2">easy</label>
+        <div class="bui-group">
+            <div class="bui-btn" b-click="page.addList">添加数据</div>
+            <div class="bui-btn" b-click="page.delList">删除数据</div>
+        </div>
+        <p><b b-class="page.watchList">二级数组可以通过watch去触发样式的设置</b></p>
+        <!-- 二级数组的computed需要通过 b-linked去绑定触发 -->
+        <p><b b-class="page.hasList2" b-linked="page.test.list2">二级数组也可以通过computed+b-linked去触发样式的设置</b></p>
+
+
+        <p><b b-class="page.hasList">二级非数组可以通过computed去触发样式的设置</b></p>
+    </main>
+</div>

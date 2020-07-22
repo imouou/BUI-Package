@@ -15,7 +15,14 @@
                 name: "n",
                 // value: "n",
                 data: ["c", "a"],
+            },
+            onChange: function(e, val, nextVal) {
+                // console.log(val)
             }
+        })
+
+        citySelect.on("lastchange", function(e, val, nextVal) {
+            console.log(e.target)
         })
 
         // 设置值
@@ -38,6 +45,7 @@
         citySelect.show();
     })
     $("#getValue").on("click", function() {
+
         console.dir(citySelect2.value())
     })
     $("#chooseCity2").on("click", function() {

@@ -1,0 +1,32 @@
+<div class="bui-page bui-box-vertical">
+    <header>
+        <div class="bui-bar">
+            <div class="bui-bar-left">
+                <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+            </div>
+            <div class="bui-bar-main">详情</div>
+            <div class="bui-bar-right">
+            </div>
+        </div>
+        <ul id="floorNav" class="bui-nav bui-nav-skin01">
+            <li class="bui-btn active">表单</li>
+            <li class="bui-btn">正文</li>
+            <li class="bui-btn">附件(2)</li>
+        </ul>
+    </header>
+    <main>
+        <div id="floor" class="bui-floor">
+            <div class="bui-floor-main container-y">
+                <div class="panel-list bui-interval">
+                    <!-- 表单 rendered="true" 编译以后的不再请求渲染 -->
+                    <view class="delayview" name="pages/store/views/form/index"></view>
+                    <!-- 正文 动态加载html -->
+                    <view class="delayview" name="pages/store/views/article/index"></view>
+                    <!-- 附件 -->
+                    <view class="delayview" name="pages/store/views/attach/index" delay="true"></view>
+                </div>
+            </div>
+            <div class="bui-floor-foot"></div>
+        </div>
+    </main>
+</div>

@@ -1,0 +1,45 @@
+﻿<style type="text/css">
+    .tab.active {
+        color: red;
+    }
+</style>
+<div class="bui-page page-store">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn btn-back"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">store数据订阅器</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+        <!-- <p b-text="page.aa.0.test">点击输出多个参数</p> -->
+
+        <!-- 公共数据 -->
+        <b b-text="app.message2">公共数据</b>,
+        <b>{{app.firstName}}</b>
+        <div b-template="app.tplLists(app.lists)"></div>
+
+        <b b-bind="app.attrs">绑定标题</b>
+        <b b-style="app.styles">绑定样式</b>
+        <b b-class="app.tabClass" class="tab">绑定类名</b>
+
+        <p b-show="app.showName">我是A,被控制的内容</p>
+        <p b-show="!app.showName">我是B,被控制的内容</p>
+        <label><input type="checkbox" b-model="app.showName" />点击可以控制A和B: <b b-text="app.showName"></b></label>
+
+        <div class="section-title">1.简单双向绑定</div>
+        <!-- 搜索条控件结构 -->
+        <div id="searchbar" class="bui-searchbar bui-box">
+            <div class="span1">
+                <div class="bui-input">
+                    <i class="icon-search"></i>
+                    <input id="search" type="search" value="" placeholder="请输入关键字" b-model="app.message" />
+                </div>
+            </div>
+        </div>
+        <div class="section-title">正在输入: <b class="result" b-text="app.message"></b>
+            <div id="reverseMessage" class="bui-btn btn-reverse">反序输入值</div>
+        </div>
+    </main>
+</div>

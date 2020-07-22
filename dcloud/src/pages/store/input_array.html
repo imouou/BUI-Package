@@ -1,0 +1,28 @@
+﻿<div class="bui-page page-store page-input">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">双向绑定数组</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+
+        <div class="section-title">1.简单双向绑定数组</div>
+        <!-- 搜索条控件结构 -->
+        <div id="searchbar" class="bui-searchbar bui-box">
+            <div class="span1">
+                <div class="bui-input">
+                    <i class="icon-search"></i>
+                    <input type="text" value="" placeholder="请输入关键字" b-model="page.message.0.name" />
+                </div>
+            </div>
+        </div>
+        <div class="section-title">正在输入:
+            <span class="result" b-text="page.message.0.name"></span>
+            <div class="bui-btn" b-click="page.reverseMessage">反序输入值</div>
+        </div>
+
+    </main>
+</div>

@@ -1,0 +1,38 @@
+﻿
+<div class="bui-page page-store">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">多选单选</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+        <div class="section">单选:</div>
+        <div class="container">
+            <select b-model="page.selected" b-template="page.tplSelect(page.options)" >
+          </select>
+          <span>Selected: <b b-text="page.selected"></b></span>
+        <div class="section">多选:</div>
+        <div class="container">
+            <!-- 多了个b-command 用于指定最早的数据渲染采用的命令,因为子集已经有静态dom,所以这里采用 append -->
+            <select b-model="page.multipleSelectes" multiple b-template="tplSelect(page.options)" b-command="append">
+                <option disabled value="">请选择</option>
+          </select>
+          <span>Selected: <b b-text="page.multipleSelectes"></b></span>
+        </div>
+        <div class="section">点击添加到右边联动:</div>
+        <div class="bui-box">
+            <div class="span1">
+                <select class="bui-select" multiple b-template="page.tplSelectA(page.selectA)">
+                </select>
+            </div>
+            <div class="span1">
+                <select class="bui-select" multiple b-template="page.tplSelectB(page.selectB)">
+                </select>
+            </div>
+        </div>
+
+    </main>
+</div>

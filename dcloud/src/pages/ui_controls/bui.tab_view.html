@@ -1,0 +1,43 @@
+﻿<div class="bui-page bui-box-vertical">
+    <header>
+        <div class="bui-bar">
+            <div class="bui-bar-left">
+                <div class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></div>
+            </div>
+            <div class="bui-bar-main">
+                固定选项卡
+            </div>
+            <div class="bui-bar-right">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="uiTab" class="bui-tab bui-box-vertical">
+            <div class="bui-tab-head">
+                <ul class="bui-nav">
+                    <li class="bui-btn">课程</li>
+                    <li class="bui-btn">观点</li>
+                    <li class="bui-btn">专访</li>
+                    <li class="bui-btn">公开课</li>
+                </ul>
+            </div>
+            <div class="bui-tab-main">
+                <ul>
+                    <!-- 内容必须在li里面 -->
+                    <li>
+                        <view name="pages/ui_controls/bui.tab_dynamic_page1"></view>
+                    </li>
+                    <li style="display: none;">
+                        <view name="pages/ui_controls/bui.tab_dynamic_page2"></view>
+                    </li>
+                    <li style="display: none;">
+                        <view name="pages/ui_controls/bui.tab_dynamic_page1"></view>
+                    </li>
+                    <li style="display: none;">
+                        <view name="pages/ui_controls/bui.tab_dynamic_page2"></view>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</div>

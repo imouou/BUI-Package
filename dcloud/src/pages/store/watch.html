@@ -1,0 +1,42 @@
+﻿<div class="bui-page page-store">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">侦听器</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+        <div class="section-title">示例1: 相互关联</div>
+        <ul class="bui-list">
+            <li class="bui-btn bui-box clearactive">
+                <label class="bui-label">姓: </label>
+                <div class="span1">
+                    <div class="bui-value"><input type="text" value="" placeholder="请输入" b-model="page.firstName"></div>
+                </div>
+            </li>
+            <li class="bui-btn bui-box clearactive">
+                <label class="bui-label">名: </label>
+                <div class="span1">
+                    <div class="bui-value"><input type="text" value="" placeholder="请输入" b-model="page.lastName"></div>
+                </div>
+            </li>
+        </ul>
+
+        <!-- firstName,lastName改变就会触发 fullName 的绑定 -->
+        <div class="container-xy">
+        结果: <b b-text="page.fullName"></b>
+        </div>
+
+        <div class="section-title">示例2: 计算</div>
+        <!-- 绑定事件,点击改变 a的值,并且会触发 b 跟着一起改变 -->
+        <div class="bui-btn" b-click="page.changeA">点击1次,a+1,结果乘以2</div>
+
+        <div class="container-xy">
+        a: <b b-text="page.a" ></b>
+        结果: <b b-text="page.b"></b>
+        </div>
+
+    </main>
+</div>

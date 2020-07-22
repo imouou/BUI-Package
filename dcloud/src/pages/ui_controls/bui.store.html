@@ -1,4 +1,9 @@
-﻿<div class="bui-page page-store">
+﻿<style type="text/css">
+    .tab.active {
+        color: red;
+    }
+</style>
+<div class="bui-page page-store">
     <header class="bui-bar">
         <div class="bui-bar-left">
             <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
@@ -8,30 +13,71 @@
         </div>
     </header>
     <main>
+
+        <!-- 公共数据 -->
+        <p b-text="app.message2">公共数据</p>
+
+        <div class="section-title">10.样式绑定</div>
+        <p b-style="page.styles">绑定title属性,查看源码才能看到</p>
+
         <div class="section-title">1.简单双向绑定</div>
         <!-- 搜索条控件结构 -->
         <div id="searchbar" class="bui-searchbar bui-box">
             <div class="span1">
                 <div class="bui-input">
                     <i class="icon-search"></i>
-                    <input id="search" type="search" value="" placeholder="请输入关键字" b-model="app:message" />
+                    <input id="search" type="search" value="" placeholder="请输入关键字" b-model="page.message" />
                 </div>
             </div>
         </div>
-        <div class="section-title">正在输入: <span class="result" b-text="app:message"></span>
+        <div class="section-title">正在输入: <span class="result" b-text="page.message"></span>
             <div id="reverseMessage" class="bui-btn">反序输入值</div>
         </div>
         <div class="section-title">2.显示隐藏</div>
-        <p b-show="app:showName">我是A,被控制的内容</p>
-        <p b-hide="app:showName">我是B,跟A相反的状态</p>
-        <label><input type="checkbox" b-checked="app:showName" />点击可以控制A和B</label>
+        <p b-show="page.showName">我是A,被控制的内容</p>
+        <!-- <p b-show="page.!showName">我是B,被控制的内容</p> -->
+        <p b-hide="page.showName">我是B,跟A相反的状态</p>
+        <label><input type="checkbox" b-checked="page.showName" />点击可以控制A和B: <span b-text="page.showName"></span></label>
+
         <div class="section-title">3.样式处理,支持对象,数组,数组不支持动态修改</div>
-        <p b-class="app:className" class="tab">样式有active样式</p>
+        <p b-class="page.tabClass" class="tab">样式有active样式</p>
 
         <div class="section-title">4.属性绑定</div>
-        <p b-bind="app:attrs">绑定title属性,查看源码才能看到</p>
+        <p b-bind="page.attrs">绑定title属性,查看源码才能看到</p>
 
-        <div class="section-title">5.关联字段,fullName 依赖于 firstName lastName</div>
-        <p b-text="app:fullName" b-linked="app:firstName&app:lastName"></p>
+        <div class="section-title">5.联动数据,fullName 依赖于 firstName lastName</div>
+        <!-- 这里需要设定关联的哪些字段, 跟vuejs不太一样 -->
+        <p b-text="page.fullName" b-linked="page.firstName&page.lastName"></p>
+
+        <div class="section-title">6.事件绑定传参</div>
+        <p b-click='page.getMessage({"id":123})'>点击输出参数是一个对象</p>
+        <p b-click="page.getMessage(3,4)">点击输出多个参数</p>
+
+        <div class="section-title">7.设置文本,支持对象</div>
+        <p b-text="page.attrs.title"></p>
+
+        <div class="section-title">8.设置Html</div>
+        <div b-html="page.title"></div>
+
+
+        <div class="section-title">9.模板绑定</div>
+        // 模板1
+        <ul b-data="page.sources" b-template="tplList" class="bui-list">
+        </ul>
+        // 模板2
+        <ul b-data="page.sources" b-template="tplList2" class="bui-list">
+        </ul>
+        <script id="tpl-list" type="text/html">
+            {{each listData item index}}
+                <li class="bui-btn" href="pages/ui_controls/bui.store.html" >{{item}}</li>
+            {{/each}} 
+        </script>
+
+        // 模板3
+        <div b-data="page.objSource" b-template="tplObject">
+        </div>
+        // 模板4
+        <div b-data="page.objSource.data" b-template="tplObjectArray">
+        </div>
     </main>
 </div>

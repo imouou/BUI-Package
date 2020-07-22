@@ -1,0 +1,56 @@
+﻿<style>
+    .bui-select-form {
+        margin-bottom: .2rem;
+    }
+    
+    .bui-select-form .bui-input {
+        text-align: right;
+    }
+    
+    .timebar {
+        padding-top: .2rem;
+        padding-bottom: .1rem;
+        background: #fff;
+    }
+    
+    .timebar .bui-label {
+        padding-left: .2rem;
+        width: 2.2rem;
+        color: #999;
+    }
+</style>
+<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">开始结束日期</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+        <ul class="bui-list bui-select-form">
+            <li class="bui-btn bui-box clearactive">
+                <label>开始时间</label>
+                <div class="span1"><input type="text" readonly class="bui-input pickerdate"></div>
+                <i class="icon-listright"></i>
+            </li>
+            <li class="bui-btn bui-box clearactive">
+                <label>结束时间</label>
+                <div class="span1"><input type="text" readonly class="bui-input pickerdate"></div>
+                <i class="icon-listright"></i>
+            </li>
+        </ul>
+
+        <div class="bui-box timebar">
+            <div class="span1">
+                <div class="bui-label">开始时间:</div>
+                <input type="text" readonly class="bui-input pickerdate">
+            </div>
+            <div class="span1">
+                <div class="bui-label">结束时间:</div>
+                <input type="text" readonly class="bui-input pickerdate">
+            </div>
+        </div>
+    </main>
+</div>

@@ -1,0 +1,46 @@
+<div class="bui-page page-store">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">模板</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+        <ul b-template="page.tplObjectList(page.objList2.0.data)" class="bui-list">
+        </ul>
+        <div class="section-title">使用es6模板</div>
+        <!-- 模板里面的数据,可以不用加 page -->
+        <ul b-template="page.tplList(page.list)" class="bui-list">
+        </ul>
+
+        <div class="section-title">渲染table</div>
+        <table class="bui-table bui-table-even" b-template="page.tplTable(page.list,page.citys)">
+        </table>
+
+        <div class="section-title">数据是对象时</div>
+        <div b-template="page.tplObject(page.obj)">
+        </div>
+        <div class="section-title">数据是复杂对象时</div>
+        <h2 b-text="page.objList.title"></h2>
+        <ul b-template="page.tplObjectList(page.objList.data)" class="bui-list">
+        </ul>
+
+        <div class="section-title">当前选中: <b b-text="page.citysCheck"></b></div>
+        <ul id="test" b-template="page.tplListCheck(page.citys)" class="bui-list">
+        </ul>
+        <div class="section-title">关联列表</div>
+        <ul id="test2" b-template="page.tplListCheck(page.citys)" class="bui-list">
+        </ul>
+
+        <div class="section-title">使用artTemplate模板</div>
+        <ul b-template="page.artTplList(page.list)" class="bui-list">
+        </ul>
+        <script id="tpl-list" type="text/html">
+            {{each listData item index}}
+            <li class="bui-btn" href="pages/store/index.html">{{item}}</li>
+            {{/each}}
+        </script>
+    </main>
+</div>

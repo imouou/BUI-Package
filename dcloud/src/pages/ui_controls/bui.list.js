@@ -1,9 +1,8 @@
 loader.define(function(require, exports, module) {
-
     var uiList = bui.list({
         id: "#scrollList",
         url: "http://www.easybui.com/demo/json/shop.json",
-        pageSize: 5,
+        pageSize: 6, // 当pageSize 小于返回的数据大小的时候,则认为是最后一页,接口返回的数据最好能返回空数组,而不是null
         data: {},
         //如果分页的字段名不一样,通过field重新定义
         field: {
@@ -13,12 +12,11 @@ loader.define(function(require, exports, module) {
         },
         callback: function(e) {
             // e.target 为你当前点击的元素
-            // $(e.target).closest(".bui-btn") 可以找到你当前点击的一整行,可以把一些属性放这里
-            console.log($(e.target).closest(".bui-btn").attr("class"))
+            // e.currentTarget 为你当前点击的handle 整行
         },
         template: function(data) {
             var html = "";
-            data.map(function(el, index) {
+            data.forEach(function(el, index) {
 
                 // 处理角标状态
                 var sub = '',
@@ -38,8 +36,8 @@ loader.define(function(require, exports, module) {
                         break;
                 }
 
-                html += `<li class="bui-btn bui-box">
-                    <div class="bui-thumbnail ${subClass}" data-sub="${sub}"><img src="${el.image}" alt=""></div>
+                html += `<li class="bui-btn bui-box" href="pages/ui/article.html?id=${index}&title=${el.name}">
+                    <div class="bui-thumbnail ${subClass}" data-sub="${sub}" ><img src="${el.image}" alt=""></div>
                     <div class="span1">
                         <h3 class="item-title">${el.name}</h3>
                         <p class="item-text">${el.address}</p>
@@ -50,9 +48,34 @@ loader.define(function(require, exports, module) {
             });
 
             return html;
+        },
+        onBeforeRefresh: function() {
+            console.log("brefore refresh")
+        },
+        onBeforeLoad: function() {
+            console.log("brefore load")
+        },
+        onRefresh: function() {
+            // 刷新以后执行
+            console.log("refreshed")
+        },
+        onLoad: function() {
+            // 刷新以后执行
+            console.log("loaded")
         }
-    });
+    })
 
+    router.$("header").click(function() {
+        // 清空
+        uiList.empty();
+        // 修改数据
+        uiList.init({
+            page: 1,
+            "data": {
+                test: "111"
+            }
+        })
+    })
 
-
+    return uiList;
 })

@@ -1,0 +1,49 @@
+﻿<style type="text/css">
+    .bui-select .active {
+        color: red;
+    }
+    .btn-controls {
+        width: 1rem;
+        margin:0 .1rem;
+    }
+    .btn-controls .bui-btn{
+        margin-top:.1rem;
+    }
+</style>
+<div class="bui-page page-store">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">多选联动</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+
+        <div class="bui-box">
+            <div class ="span1">
+                <div class="subtitle bui-box">
+                    <div class="span1">列表1</div>
+                    <b b-text="page.selectAChecked.length"></b>/<b b-text="page.selectA.length"></b>
+                </div>
+                <div class="bui-list" b-template="page.tplSelect(page.selectA,selectA,selectAChecked)">
+                </div>
+            </div>
+            <div class="btn-controls">
+                <!-- 如果传多个数据,()里面不要使用 page. -->
+                <div class="bui-btn round" b-click="page.moveSelect(selectB,selectAChecked,selectA)" b-class="page.canAdd.disabled">&gt;&gt;</div>
+                <div class="bui-btn round" b-click="page.moveSelect(selectA,selectBChecked,selectB)" b-class="page.canDel.disabled">&lt;&lt;</div>
+            </div>
+            <div class="span1">
+                <div class="subtitle bui-box">
+                    <div class="span1">列表2</div>
+                    <b b-text="page.selectBChecked.length"></b>/<b b-text="page.selectB.length"></b>
+                </div>
+                <div class="bui-list" b-template="page.tplSelect(page.selectB,selectB,selectBChecked)">
+                </div>
+            </div>
+        </div>
+
+    </main>
+</div>

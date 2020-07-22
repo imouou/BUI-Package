@@ -1,0 +1,27 @@
+<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">二维数组多选</div>
+        <div class="bui-bar-right">
+            <!-- 右边按钮 -->
+        </div>
+    </header>
+    <main>
+        <div id="uiTabFilter" class="page-filter container-xy">
+            <div class="bui-interval-x">
+                <div class="bui-btn inline round primary mini" b-click="filter.selectAllFrom">全选</div>
+                <div class="bui-btn inline round success mini" b-click="filter.selectReverse">反选</div>
+                <div class="bui-btn inline round danger mini" b-click="filter.selectNoneFrom">清空</div>
+            </div>
+            <div class="tag-list" b-template="filter.templateFrom(filter.froms)">
+                <!-- <div class="bui-fluid-space-3"> -->
+                <!-- <div class="span1"><input type="checkbox" name="froms" class="bui-check" uncheck="滨江集团" check="滨江集团" value="滨江集团" b-model="filter.fromChecked"></div>
+					<div class="span1"><input type="checkbox" name="froms" class="bui-check" uncheck="滨江集团2" check="滨江集团2" value="滨江集团2" b-model="filter.fromChecked"></div>
+					<div class="span1"><input type="checkbox" name="froms" class="bui-check" uncheck="滨江集团3" check="滨江集团3" value="滨江集团3" b-model="filter.fromChecked"></div> -->
+                <!-- </div> -->
+            </div>
+        </div>
+    </main>
+</div>

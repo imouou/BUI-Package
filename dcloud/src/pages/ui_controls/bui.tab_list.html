@@ -1,52 +1,56 @@
-﻿
-<style>
+﻿<style>
     .bui-list .bui-btn i {
         font-size: 0.4rem;
         margin-right: 0.2rem;
     }
 </style>
-<div class="bui-page">
-	<header class="bui-bar">
-		<div class="bui-bar-left">
-			<a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
-		</div>
-		<div class="bui-bar-main">
-			<ul id="tabListNav" class="bui-nav" style="width: 60%;">
-				<li class="bui-btn active">首页</li>
-				<li class="bui-btn ">新闻</li>
-			</ul>
-		</div>
-		<div class="bui-bar-right">
-		</div>
-	</header>
-	<main>
-		<div id="tabList" class="bui-tab">
-		  <div class="bui-tab-main">
-		    <ul>
-		      <li>
-		        <div id="tabListScroll" class="bui-scroll">
-        			<div class="bui-scroll-head"></div>
-        			<div class="bui-scroll-main">
-        				<ul class="bui-list">
-        				</ul>
-        			</div>
-        			<div class="bui-scroll-foot"></div>
-        		</div>
-		      </li>
-		      <li style="display: none;">
-		        <div id="tabListScroll2" class="bui-scroll">
-        			<div class="bui-scroll-head"></div>
-        			<div class="bui-scroll-main">
-        				<ul class="bui-list">
-        				</ul>
-        			</div>
-        			<div class="bui-scroll-foot"></div>
-        		</div>
-		      </li>
-		    </ul>
-		  </div>
-		</div>
+<div class="bui-page bui-box-vertical">
+    <header>
+        <div class="bui-bar">
+            <div class="bui-bar-left">
+                <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+            </div>
+            <div class="bui-bar-main">
+                tab加载list
+            </div>
+            <div class="bui-bar-right">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="tabList" class="bui-tab bui-box-vertical">
+            <div class="bui-tab-head">
+                <ul class="bui-nav">
+                    <li class="bui-btn active">首页</li>
+                    <li class="bui-btn ">新闻</li>
+                </ul>
+            </div>
+            <div class="bui-tab-main">
+                <ul>
+                    <li>
+                        <div id="tabListScroll" class="bui-scroll fullheight">
+                            <div class="bui-scroll-head"></div>
+                            <div class="bui-scroll-main">
+                                <ul class="bui-list">
+                                </ul>
+                            </div>
+                            <div class="bui-scroll-foot"></div>
+                        </div>
+                    </li>
+                    <li style="display: none;">
+                        <div id="tabListScroll2" class="bui-scroll fullheight">
+                            <div class="bui-scroll-head"></div>
+                            <div class="bui-scroll-main">
+                                <ul class="bui-list">
+                                </ul>
+                            </div>
+                            <div class="bui-scroll-foot"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-		
-	</main>
+
+    </main>
 </div>

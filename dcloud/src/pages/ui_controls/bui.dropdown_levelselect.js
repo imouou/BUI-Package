@@ -15,6 +15,7 @@
             id: "#uiDoropdown",
             // showArrow: false,
             autoClose: false,
+            target: ".bui-dropdown-content",
             targetHandle: ".bui-tab-main .bui-list li",
             stopPropagation: true,
             //设置relative为false,二级菜单继承父层宽度

@@ -1,0 +1,31 @@
+﻿<div class="bui-page page-store page-input">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">表单各类事件</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+        <form name="formTest" b-submit="page.submitForm" action="" method="get">
+            <ul class="bui-list">
+                <li class="bui-btn bui-box clearactive">
+                    <label class="bui-label">帐号</label>
+                    <div class="span1">
+                        <div class="bui-value"><input type="text" name="fname" b-model="page.message"></div>
+                    </div>
+                </li>
+                <li class="bui-btn bui-box clearactive">
+                    <label class="bui-label">密码</label>
+                    <div class="span1">
+                        <div class="bui-value"><input type="text" name="fname" b-blur="page.getBlur" b-focus="page.getFocus"></div>
+                    </div>
+                </li>
+            </ul>
+            <div class="container-xy">
+                <button class="bui-btn primary round" type="submit">提交</button>
+            </div>
+        </form>
+    </main>
+</div>

@@ -1,0 +1,36 @@
+﻿<style type="text/css">
+    .bui-select .active {
+        color: red;
+    }
+</style>
+<div class="bui-page page-store">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">多选联动</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+        
+        <div class="section">多选联动:</div>
+        <div class="bui-box">
+            <div class ="span1">
+                <h2 class="bui-box"><b b-text="page.selectAChecked.length"></b>/<b b-text="page.selectA.length"></b></h2>
+                <div class="bui-select" b-template="page.tplSelectA(page.selectA)">
+                </div>
+            </div>
+            <div style="width: 100px">
+                <div class="bui-btn" b-click="page.addToB">添加到B</div>
+                <div class="bui-btn" b-click="page.addToA">添加到A</div>
+            </div>
+            <div class="span1">
+                <h2 class="bui-box"><div class="span1">列表2</div><b b-text="page.selectBChecked.length"></b>/<b b-text="page.selectB.length"></b></h2>
+                <div class="bui-select" b-template="page.tplSelectB(page.selectB)">
+                </div>
+            </div>
+        </div>
+
+    </main>
+</div>

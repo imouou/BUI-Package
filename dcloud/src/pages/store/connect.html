@@ -1,0 +1,35 @@
+﻿<style>
+    input:disabled {
+        background: #efefef;
+        border: 1px solid #ddd;
+    }
+</style>
+<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">关联实例</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main class="container-xy">
+
+        <h3>关联1: 关联相同字段</h3>
+        <input b-model="page.attrs.test" placeholder="" type="text">
+        <div class="scope1">
+            <input b-model="page1.attrs.test" placeholder="" type="text">
+        </div>
+        <h3>关联2: 关联到不同字段</h3>
+        <input b-model="page.attrs.test" placeholder="" type="text">
+        <div class="scope1">
+            <input b-model="page1.props.test" placeholder="" type="text">
+        </div>
+        <h3>关联3: 关联到根路径</h3>
+        <input b-model="page.attrs.test" placeholder="" type="text">
+        <div class="scope1">
+            <input b-model="page1.test" placeholder="" type="text">
+        </div>
+
+    </main>
+</div>

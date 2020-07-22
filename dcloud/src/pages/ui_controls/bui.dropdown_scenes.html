@@ -1,273 +1,238 @@
 ﻿<style>
-	.bui-nav-main {
-		-webkit-box-flex:1;
-		box-flex:1;
-	}
-	.bui-nav-main .bui-nav .bui-btn {
-		border-top: 0;
-	}
+    .bui-nav-main {
+        -webkit-box-flex: 1;
+        box-flex: 1;
+    }
     
+    .bui-nav-main .bui-nav .bui-btn {
+        border-top: 0;
+    }
 </style>
 <div class="bui-page">
-	<header class="bui-bar">
-		<div class="bui-bar-left" style="overflow:visible;">
-			<!-- 不修改文本值 -->
-			<a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+    <header class="bui-bar">
+        <div class="bui-bar-left" style="overflow:visible;">
+            <!-- 不修改文本值 -->
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
 
-		</div>
-		<div class="bui-bar-main">
-			
-			<!-- 不修改文本值 -->
-			<div id="barMain" class="bui-dropdown bui-arrow-center">
-				<div class="bui-btn">
-					<span class="span1">下拉菜单</span>
-					<i class="icon-dropdown"></i>
-				</div>
-				<ul class="bui-list round">
-					<!-- 默认激活第一个 -->
-					<li class="bui-btn" value="11">
-						列表1
-					</li>
-					<li class="bui-btn" value="22">
-						列表2
-					</li>
-				</ul>
-			</div>
-		</div>
+        </div>
+        <div class="bui-bar-main">
 
-		<!-- 这个样式要设置才会看到二级菜单 -->
-		<div class="bui-bar-right" style="overflow:visible;">
-			<!-- 不修改文本值 -->
-			<div id="barRight" class="bui-dropdown" change="false">
-				<div class="bui-btn bui-box-center">
-					<i class="icon-dropdown"></i>
-				</div>
-				<ul class="bui-list round">
-					<!-- 默认激活第一个 -->
-					<li class="bui-btn" value="11">
-						列表1
-					</li>
-					<li class="bui-btn" value="22">
-						列表2
-					</li>
-				</ul>
-			</div>
-		</div>
-	</header>
-	<main id="main">
-			
-		<div id="uiSearchbar" class="bui-searchbar">
-		<!-- 以父层为宽度 -->
-		    <div class="bui-input">
-		    	<div id="searchDropdown" class="bui-dropdown bui-arrow-center" style="width:120px;">
-					<div class="bui-btn bui-box" >
-						<div class="span1">类型</div>
-						<i class="icon-dropdown"></i>
-					</div>
-					<ul class="bui-list round">
-						<!-- 默认激活第一个 -->
-						<li class="bui-btn" value="11">
-							文章
-						</li>
-						<li class="bui-btn" value="22">
-							图文
-						</li>
-						<li class="bui-btn" value="33">
-							视频
-						</li>
-					</ul>
-				</div>
-		        <input type="text" placeholder="请输入关键字搜索" value=""/>
-		        <i class="icon-search"></i>
-		    </div>
-		</div>
-		<h3 class="section-title">1. 结合搜索条件示例</h3>
-		
-		<div class="bui-panel">
-			<div class="bui-panel-head">示例:</div>
-			<div class="bui-panel-main">
-				<div class="container">
-					<h4>html:</h4>
-					<xmp>
-<div id="uiSearchbar" class="bui-searchbar">
-  <div class="bui-input">
-    <div id="searchDropdown" class="bui-dropdown bui-arrow-center" style="width:120px;">
-      <div class="bui-btn bui-box" >
-        <div class="span1">条件</div>
-        <i class="icon-dropdown"></i>
-      </div>
-      <ul class="bui-list round">
-        <li class="bui-btn" value="11">列表1</li>
-        <li class="bui-btn" value="22">列表2</li>
-      </ul>
-    </div>
-    <input type="text" placeholder="请输入关键字搜索" value=""/>
-    <i class="icon-search"></i>
-  </div>
+            <!-- 不修改文本值 -->
+            <div id="barMain" class="bui-dropdown bui-arrow-center">
+                <div class="bui-btn">
+                    <span class="span1">下拉菜单</span>
+                    <i class="icon-dropdown"></i>
+                </div>
+                <ul class="bui-list round">
+                    <!-- 默认激活第一个 -->
+                    <li class="bui-btn" value="11">
+                        列表1
+                    </li>
+                    <li class="bui-btn" value="22">
+                        列表2
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 这个样式要设置才会看到二级菜单 -->
+        <div class="bui-bar-right" style="overflow:visible;">
+            <!-- 不修改文本值 -->
+            <div id="barRight" class="bui-dropdown" change="false">
+                <div class="bui-btn bui-box-center">
+                    <i class="icon-dropdown"></i>
+                </div>
+                <ul class="bui-list round">
+                    <!-- 默认激活第一个 -->
+                    <li class="bui-btn" value="11">
+                        列表1
+                    </li>
+                    <li class="bui-btn" value="22">
+                        列表2
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main id="main">
+
+        <div id="uiSearchbar" class="bui-searchbar">
+            <!-- 以父层为宽度 -->
+            <div class="bui-input">
+                <div id="searchDropdown" class="bui-dropdown bui-arrow-center" style="width:120px;">
+                    <div class="bui-btn bui-box">
+                        <div class="span1">类型</div>
+                        <i class="icon-dropdown"></i>
+                    </div>
+                    <ul class="bui-list round">
+                        <!-- 默认激活第一个 -->
+                        <li class="bui-btn" value="11">
+                            文章
+                        </li>
+                        <li class="bui-btn" value="22">
+                            图文
+                        </li>
+                        <li class="bui-btn" value="33">
+                            视频
+                        </li>
+                    </ul>
+                </div>
+                <input type="text" placeholder="请输入关键字搜索" value="" />
+                <i class="icon-search"></i>
+            </div>
+        </div>
+        <h3 class="section-title">1. 结合搜索条件示例</h3>
+
+        <div class="bui-panel">
+            <div class="bui-panel-head">示例:</div>
+            <div class="bui-panel-main">
+                <div class="container">
+                    <h4>html:</h4>
+                    <xmp>
+                        <div id="uiSearchbar" class="bui-searchbar">
+                            <div class="bui-input">
+                                <div id="searchDropdown" class="bui-dropdown bui-arrow-center" style="width:120px;">
+                                    <div class="bui-btn bui-box">
+                                        <div class="span1">条件</div>
+                                        <i class="icon-dropdown"></i>
+                                    </div>
+                                    <ul class="bui-list round">
+                                        <li class="bui-btn" value="11">列表1</li>
+                                        <li class="bui-btn" value="22">列表2</li>
+                                    </ul>
+                                </div>
+                                <input type="text" placeholder="请输入关键字搜索" value="" />
+                                <i class="icon-search"></i>
+                            </div>
+                        </div>
+                    </xmp>
+                    <h4>js:</h4>
+                    <xmp>
+                        //搜索下拉菜单 var searchDropdown = bui.dropdown({ id: "#searchDropdown", //设置relative为false,二级菜单继承父层宽度 relative: false, callback: function () { console.log( searchDropdown.value() ) } })
+                    </xmp>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="section-title">2. 结合遮罩示例</h3>
+
+        <div class="bui-panel">
+            <div class="bui-panel-head">示例:</div>
+            <div class="bui-panel-main">
+                <div class="container">
+                    <h4>html:</h4>
+                    <xmp>
+                        <div id="uiDropdown" class="bui-dropdown">
+                            <div class="bui-btn bui-box">
+                                <div class="span1">普通下拉菜单</div>
+                                <i class="icon-dropdown"></i>
+                            </div>
+                            <ul class="bui-list">
+                                <li class="bui-btn" value="11">
+                                    列表1
+                                </li>
+                                <li class="bui-btn" value="22">
+                                    列表2
+                                </li>
+                            </ul>
+                        </div>
+                    </xmp>
+                    <h4>js:</h4>
+                    <xmp>
+                        // 下拉菜单有遮罩的情况 var uiMask = bui.mask({ autoTrigger:false, appendTo:"#main", zIndex:9 }); var uiDropdown = bui.dropdown({ id: "#uiDropdown" }); // 通过监听事件绑定 uiDropdown.on("show",function () { uiMask.show(); }) uiDropdown.on("hide",function () { uiMask.hide();
+                        })
+                    </xmp>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="section-title">3. 在结合bui-bar示例</h3>
+
+        <div class="bui-panel">
+            <div class="bui-panel-head">示例:</div>
+            <div class="bui-panel-main">
+                <div class="container">
+                    <h4>html:</h4>
+                    <xmp>
+                        <div class="bui-bar">
+                            <div class="bui-bar-left" style="overflow:visible;">
+                                <!-- 不修改文本值 -->
+                                <div id="barLeft2" class="bui-dropdown" change="false">
+                                    <div class="bui-btn bui-box-center"><i class="icon-dropdown"></i></div>
+                                    <ul class="bui-list round">
+                                        <li class="bui-btn" value="11">列表1</li>
+                                        <li class="bui-btn" value="22">列表2</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bui-bar-main">
+                                <div id="barMain2" class="bui-dropdown bui-arrow-center">
+                                    <div class="bui-btn"><span class="span1">下拉菜单</span><i class="icon-dropdown"></i></div>
+                                    <ul class="bui-list round">
+                                        <li class="bui-btn" value="11">列表1</li>
+                                        <li class="bui-btn" value="22">列表2</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- 这个样式要设置才会看到二级菜单 -->
+                            <div class="bui-bar-right" style="overflow:visible;">
+                                <!-- 不修改文本值 -->
+                                <div id="barRight2" class="bui-dropdown" change="false">
+                                    <div class="bui-btn bui-box-center"><i class="icon-dropdown"></i></div>
+                                    <ul class="bui-list round">
+                                        <li class="bui-btn" value="11">列表1</li>
+                                        <li class="bui-btn" value="22">列表2</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </xmp>
+                    <h4>js:</h4>
+                    <xmp>
+                        //下拉菜单 在顶部右边 var barRight = bui.dropdown({ id: "#barRight", showArrow: true, width: 200 }); //下拉菜单 在顶部左边 var barLeft = bui.dropdown({ id: "#barLeft", showArrow: true, width: 200 }) //下拉菜单 在顶部中间 var barMain = bui.dropdown({ id: "#barMain", showArrow: true,
+                        relative: false })
+
+                    </xmp>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+
+        <div class="bui-bar">
+            <div class="bui-nav-main">
+                <ul class="bui-nav">
+                    <li class="bui-btn bui-box-vertical active"><i class="icon-home"><span class="bui-badges">15</span></i>
+                        <div class="span1">首页</div>
+                    </li>
+                    <li class="bui-btn bui-box-vertical"><i class="icon-home"></i>
+                        <div class="span1">新闻</div>
+                    </li>
+                    <li class="bui-btn bui-box-vertical"><i class="icon-home"><span class="bui-badges"></span></i>
+                        <div class="span1">图片</div>
+                    </li>
+                </ul>
+            </div>
+            <!-- 这个样式要设置才会看到二级菜单 -->
+            <div class="bui-bar-right" style="overflow:visible;">
+                <!-- 不修改文本值 -->
+                <div id="barRight2" class="bui-dropdown" change="false">
+                    <div class="bui-btn bui-box-vertical bui-box-center">
+                        <i class="icon-dropdown"></i> 更多
+                    </div>
+                    <ul class="bui-list round">
+                        <!-- 默认激活第一个 -->
+                        <li class="bui-btn" value="11">
+                            列表1
+                        </li>
+                        <li class="bui-btn" value="22">
+                            列表2
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 </div>
-			 		</xmp>
-					<h4>js:</h4>
-					<xmp>
-//搜索下拉菜单
-var searchDropdown = bui.dropdown({
-	id: "#searchDropdown",
-	//设置relative为false,二级菜单继承父层宽度
-	relative: false,
-	callback: function () {
-		console.log( searchDropdown.value() )
-	}
-})
-			 		</xmp>
-				</div>
-			</div>
-		</div>
-
-		<h3 class="section-title">2. 结合遮罩示例</h3>
-		
-		<div class="bui-panel">
-			<div class="bui-panel-head">示例:</div>
-			<div class="bui-panel-main">
-				<div class="container">
-					<h4>html:</h4>
-					<xmp>
-<div id="uiDropdown" class="bui-dropdown">
-  <div class="bui-btn bui-box" >
-    <div class="span1">普通下拉菜单</div>
-    <i class="icon-dropdown"></i>
-  </div>
-  <ul class="bui-list">
-    <li class="bui-btn" value="11">
-      列表1
-    </li>
-    <li class="bui-btn" value="22">
-      列表2
-    </li>
-  </ul>
-</div>
-			 		</xmp>
-					<h4>js:</h4>
-					<xmp>
-// 下拉菜单有遮罩的情况
-var uiMask = bui.mask({
-	autoTrigger:false,
-	appendTo:"#main",
-	zIndex:9
-});
-
-var uiDropdown = bui.dropdown({
-    id: "#uiDropdown"
-});
-
-// 通过监听事件绑定
-uiDropdown.on("show",function () {
-	uiMask.show();
-})
-uiDropdown.on("hide",function () {
-	uiMask.hide();
-})
-			 		</xmp>
-				</div>
-			</div>
-		</div>
-
-		<h3 class="section-title">3. 在结合bui-bar示例</h3>
-		
-		<div class="bui-panel">
-			<div class="bui-panel-head">示例:</div>
-			<div class="bui-panel-main">
-				<div class="container">
-					<h4>html:</h4>
-					<xmp>
-<div class="bui-bar">
-  <div class="bui-bar-left" style="overflow:visible;">
-	<!-- 不修改文本值 -->
-	<div id="barLeft2" class="bui-dropdown" change="false">
-	  <div class="bui-btn bui-box-center"><i class="icon-dropdown"></i></div>
-	  <ul class="bui-list round">
-	    <li class="bui-btn" value="11">列表1</li>
-	    <li class="bui-btn" value="22">列表2</li>
-	  </ul>
-	</div>
-  </div>
-  <div class="bui-bar-main">
-    <div id="barMain2" class="bui-dropdown bui-arrow-center">
-      <div class="bui-btn"><span class="span1">下拉菜单</span><i class="icon-dropdown"></i></div>
-      <ul class="bui-list round">
-        <li class="bui-btn" value="11">列表1</li>
-        <li class="bui-btn" value="22">列表2</li>
-      </ul>
-    </div>
-  </div>
-	<!-- 这个样式要设置才会看到二级菜单 -->
-  <div class="bui-bar-right" style="overflow:visible;">
-  <!-- 不修改文本值 -->
-    <div id="barRight2" class="bui-dropdown" change="false">
-      <div class="bui-btn bui-box-center"><i class="icon-dropdown"></i></div>
-      <ul class="bui-list round">
-        <li class="bui-btn" value="11">列表1</li>
-        <li class="bui-btn" value="22">列表2</li>
-      </ul>
-    </div>
-  </div>
-</div>
-			 		</xmp>
-					<h4>js:</h4>
-					<xmp>
-//下拉菜单 在顶部右边
-var barRight = bui.dropdown({
-	id: "#barRight",
-	showArrow: true,
-	width: 200
-});
-//下拉菜单 在顶部左边
-var barLeft = bui.dropdown({
-	id: "#barLeft",
-	showArrow: true,
-	width: 200
-})
-//下拉菜单 在顶部中间
-var barMain = bui.dropdown({
-	id: "#barMain",
-	showArrow: true,
-	relative: false
-})
-
-			 		</xmp>
-				</div>
-			</div>
-		</div>
-		
-	</main>
-	<footer>
-		
-		<div class="bui-bar">
-			<div class="bui-nav-main">
-				<ul class="bui-nav">
-					<li class="bui-btn bui-box-vertical active"><i class="icon-home"><span class="bui-badges">15</span></i><div class="span1">首页</div></li>
-					<li class="bui-btn bui-box-vertical"><i class="icon-home"></i><div class="span1">新闻</div></li>
-					<li class="bui-btn bui-box-vertical"><i class="icon-home"><span class="bui-badges"></span></i><div class="span1">图片</div></li>
-				</ul>
-			</div>
-			<!-- 这个样式要设置才会看到二级菜单 -->
-			<div class="bui-bar-right" style="overflow:visible;">
-				<!-- 不修改文本值 -->
-				<div id="barRight2" class="bui-dropdown" change="false">
-					<div class="bui-btn bui-box-vertical bui-box-center">
-						<i class="icon-dropdown"></i>
-						更多
-					</div>
-					<ul class="bui-list round">
-						<!-- 默认激活第一个 -->
-						<li class="bui-btn" value="11">
-							列表1
-						</li>
-						<li class="bui-btn" value="22">
-							列表2
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</footer>
-</div>
-        <div id="dialog"></div>
+<div id="dialog"></div>

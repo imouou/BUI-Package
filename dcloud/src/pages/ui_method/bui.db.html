@@ -1,0 +1,37 @@
+<form id="form">
+    <p>项目名称：<input required name="name" autocomplete="off" required></p>
+    <p>开始时间：<input type="date" value="2017-07-16" name="begin" required></p>
+    <p>预计结束：<input type="date" value="2057-07-16" name="end" required></p>
+    <p>参与人员：<input name="person" placeholder="多人空格分隔" required autocomplete="off"></p>
+    <p>补充说明：<textarea rows="5" placeholder="非必填" name="remark"></textarea></p>
+    <p><input type="submit" value="确定创建"></p>
+</form>
+
+<div id="result" class="result">
+    <table>
+        <thead>
+            <tr>
+                <th>项目名称</th>
+                <th>开始时间</th>
+                <th>结束时间</th>
+                <th>参与人员</th>
+                <th>补充说明</th>
+                <th width="30">操作</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div id="status" class="status">加载中...</div>
+</div>
+
+<!-- 列表数据模板 -->
+<script id="tplList" type="text/template">
+    <tr>
+        <td data-key="name" data-id="$id$" contenteditable="plaintext-only">$name$</td>
+        <td data-key="begin" data-id="$id$" contenteditable="plaintext-only">$begin$</td>
+        <td data-key="end" data-id="$id$" contenteditable="plaintext-only">$end$</td>
+        <td data-key="person" data-id="$id$" contenteditable="plaintext-only">$person$</td>
+        <td data-key="remark" data-id="$id$" contenteditable="plaintext-only">$remark$</td>
+        <td><a href="javascript:" role="button" class="jsListDel" data-id="$id$">删除</a></td>
+    </tr>
+</script>

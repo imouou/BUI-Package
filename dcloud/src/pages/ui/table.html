@@ -1,43 +1,228 @@
-﻿
-<div class="bui-page">
-	<header class="bui-bar">
-		<div class="bui-bar-left">
-			<a class="bui-btn btn-back"><i class="icon-back"></i></a>
-			
-		</div>
-		<div class="bui-bar-main">表格</div>
-		<div class="bui-bar-right">
-		</div>
-	</header>
-	<main>
-		<table class="bui-table bui-table-odd">
-			<tbody>
-				<tr>
-					<th style="width:25%">1</th>
-					<th style="width:25%">2</th>
-					<th style="width:25%">3</th>
-					<th style="width:25%">4</th>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>2</td>
-					<td>3</td>
-					<td>4</td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>2</td>
-					<td>3</td>
-					<td>4</td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>2</td>
-					<td>3</td>
-					<td>4</td>
-				</tr>
-			</tbody>
-		</table>
-		
-	</main>
+﻿<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn btn-back"><i class="icon-back"></i></a>
+
+        </div>
+        <div class="bui-bar-main">表格</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main class="container-xy">
+        <div class="subtitle">无背景表格</div>
+        <table class="bui-table bui-table-plain">
+            <tbody>
+                <tr>
+                    <th style="width:25%">标题</th>
+                    <th style="width:25%">描述</th>
+                    <th style="width:25%">备注</th>
+                    <th style="width:25%">时间</th>
+                </tr>
+                <tr>
+                    <td>标题1</td>
+                    <td>描述1</td>
+                    <td>备注1</td>
+                    <td>2020-5-30</td>
+                </tr>
+                <tr>
+                    <td>标题2</td>
+                    <td>描述2</td>
+                    <td>备注2</td>
+                    <td>2020-5-30</td>
+                </tr>
+                <tr>
+                    <td>标题3</td>
+                    <td>描述3</td>
+                    <td>备注3</td>
+                    <td>2020-5-30</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <div class="subtitle">有背景表格</div>
+        <table class="bui-table bui-table-card round">
+            <tbody>
+                <tr>
+                    <th style="width:25%">标题</th>
+                    <th style="width:25%">描述</th>
+                    <th style="width:25%">备注</th>
+                    <th style="width:25%">时间</th>
+                </tr>
+                <tr>
+                    <td>标题1</td>
+                    <td>描述1</td>
+                    <td>备注1</td>
+                    <td>2020-5-30</td>
+                </tr>
+                <tr>
+                    <td>标题2</td>
+                    <td>描述2</td>
+                    <td>备注2</td>
+                    <td>2020-5-30</td>
+                </tr>
+                <tr>
+                    <td>标题3</td>
+                    <td>描述3</td>
+                    <td>备注3</td>
+                    <td>2020-5-30</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <div class="subtitle">横向滚动表格</div>
+        <div class="bui-panel bui-table-card round">
+            <div class="bui-panel-main">
+                <table class="bui-table" style="width:12rem;">
+                    <tbody>
+                        <tr>
+                            <th style="width:25%">标题</th>
+                            <th style="width:25%">描述</th>
+                            <th style="width:25%">备注</th>
+                            <th style="width:25%">时间</th>
+                        </tr>
+                        <tr>
+                            <td>标题1</td>
+                            <td>描述1</td>
+                            <td>备注1</td>
+                            <td>2020-5-30</td>
+                        </tr>
+                        <tr>
+                            <td>标题2</td>
+                            <td>描述2</td>
+                            <td>备注2</td>
+                            <td>2020-5-30</td>
+                        </tr>
+                        <tr>
+                            <td>标题3</td>
+                            <td>描述3</td>
+                            <td>备注3</td>
+                            <td>2020-5-30</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="bui-panel-foot">
+                <div class="bui-box-align-middle">
+                    <div class="span1">
+                        <!--自适应内容-->
+                        <div class="bui-pagenation">
+                            1-5 of 10
+                        </div>
+                    </div>
+                    <div class="bui-group round">
+                        <div class="bui-btn"><i class="icon-listleft"></i></div>
+                        <div class="bui-btn"><i class="icon-listright"></i></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <div class="subtitle">固定顶部滚动表格</div>
+        <div class="bui-panel bui-table-card round">
+            <div class="bui-panel-head">
+                <table class="bui-table">
+                    <tbody>
+                        <tr>
+                            <th style="width:25%">标题</th>
+                            <th style="width:25%">描述</th>
+                            <th style="width:25%">备注</th>
+                            <th style="width:25%">时间</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="bui-panel-main" style="height: 3rem;">
+                <table class="bui-table">
+                    <tbody>
+                        <tr>
+                            <td style="width:25%">标题1</td>
+                            <td style="width:25%">描述1</td>
+                            <td style="width:25%">备注1</td>
+                            <td style="width:25%">2020-5-30</td>
+                        </tr>
+                        <tr>
+                            <td>标题2</td>
+                            <td>描述2</td>
+                            <td>备注2</td>
+                            <td>2020-5-30</td>
+                        </tr>
+                        <tr>
+                            <td>标题3</td>
+                            <td>描述3</td>
+                            <td>备注3</td>
+                            <td>2020-5-30</td>
+                        </tr>
+                        <tr>
+                            <td>标题2</td>
+                            <td>描述2</td>
+                            <td>备注2</td>
+                            <td>2020-5-30</td>
+                        </tr>
+                        <tr>
+                            <td>标题3</td>
+                            <td>描述3</td>
+                            <td>备注3</td>
+                            <td>2020-5-30</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="bui-panel-foot">
+                <div class="bui-box-center">
+                    <div id="uiDropdown" class="bui-dropdown bui-dropdown-page">
+                        <div class="bui-btn bui-box round">
+                            <div class="span1">1</div>
+                            <i class="icon-dropdown"></i>
+                        </div>
+                    </div>
+                    <div class="span1">
+                        <!--自适应内容-->
+                        <div class="bui-pagenation">
+                            1-5 of 10
+                        </div>
+                    </div>
+                    <div class="bui-group round">
+                        <div class="bui-btn"><i class="icon-listleft"></i></div>
+                        <div class="bui-btn"><i class="icon-listright"></i></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <br>
+        <div class="subtitle">隔行表格</div>
+
+        <table class="bui-table bui-table-card round bui-table-odd">
+            <tbody>
+                <tr>
+                    <th style="width:25%">标题</th>
+                    <th style="width:25%">描述</th>
+                    <th style="width:25%">备注</th>
+                    <th style="width:25%">时间</th>
+                </tr>
+                <tr>
+                    <td>标题2</td>
+                    <td>描述2</td>
+                    <td>备注2</td>
+                    <td>2020-5-30</td>
+                </tr>
+                <tr>
+                    <td>标题3</td>
+                    <td>描述3</td>
+                    <td>备注3</td>
+                    <td>2020-5-30</td>
+                </tr>
+                <tr>
+                    <td>标题2</td>
+                    <td>描述2</td>
+                    <td>备注2</td>
+                    <td>2020-5-30</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </main>
 </div>

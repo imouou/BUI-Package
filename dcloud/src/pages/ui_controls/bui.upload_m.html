@@ -1,0 +1,48 @@
+﻿<style>
+    output {
+        word-break: break-all;
+    }
+    
+    .bui-box-space {
+        margin-bottom: .2rem;
+    }
+</style>
+<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">多个上传共享</div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+        <!-- 上传示例 -->
+        <div class="section-title">
+            附件上传:
+        </div>
+        <div class="bui-upload bui-fluid-space-4 upload-photo">
+            <div class="span1">
+                <div id="btnUpload" class="bui-btn" data-type="doc">
+                    <i class="icon-plus large"></i>
+                </div>
+            </div>
+        </div>
+        <div class="section-title">
+            头像上传:
+        </div>
+        <div class="bui-upload bui-fluid-space-4 upload-photo">
+            <div class="span1">
+                <div id="faceUpload" class="bui-btn" data-type="face">
+                    <i class="icon-plus large"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="bui-box-space">
+            <div class="span1">
+                <div class="bui-btn" id="uploadAll">上传所有</div>
+            </div>
+        </div>
+    </main>
+</div>

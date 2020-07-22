@@ -1,0 +1,3 @@
+loader.define(function() {
+
+})

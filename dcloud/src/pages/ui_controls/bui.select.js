@@ -1,5 +1,7 @@
 ﻿loader.define(function(require, exports, module) {
 
+    var a = [];
+
     //动态绑定
     var uiSelectCustom = bui.select({
         id: "#selectCustom",
@@ -36,7 +38,9 @@
         }
     })
 
+
     $("#selectAll").on("click", function(argument) {
+
         uiSelectCustom.selectAll();
     })
 
@@ -49,6 +53,7 @@
     })
 
     $("#queding").on("click", function(argument) {
+        console.log(uiSelectCustom.allValues());
 
         console.log(uiSelectCustom.text());
     })

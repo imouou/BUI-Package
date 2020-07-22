@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>BUI官网-Demo控件演示</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="keywords" content="BUI框架Demo,BUI Demo,BUI演示,BUI控件">
+    <meta name="description" content="BUI 有着丰富的控件,通过demo便可以了解到各个控件的效果及使用方法">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../../css/bui.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+</head>
+
+<body>
+    <div class="bui-page">
+        <header class="bui-bar">
+            <div class="bui-bar-left">
+                <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+            </div>
+            <div class="bui-bar-main">页面标题</div>
+            <div class="bui-bar-right">
+                <!-- 右边按钮 -->
+            </div>
+        </header>
+        <main>
+            <!-- 正文内容 -->
+            <component name="pages/components/list/index"></component>
+        </main>
+        <footer>
+            <!-- 底部内容 -->
+        </footer>
+    </div>
+    <script src="../../js/zepto.js"></script>
+    <script src="../../js/platform/cordova.js"></script>
+    <script src="../../js/platform/bingotouch.js"></script>
+    <script src="../../js/platform/linkplugins.js"></script>
+    <script src="../../js/bui.js"></script>
+    <!-- 初始化单页 -->
+    <script src="mindex.js"></script>
+</body>
+
+</html>

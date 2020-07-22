@@ -1,13 +1,15 @@
 ﻿loader.define(function(require,exports,module) {
 
-    // 默认效果2: 
+    // 默认效果2:
         var uiLoading = bui.loading({
             appendTo:"#loading",
+            width: 40,
+            height: 40,
             callback: function (argument) {
                 console.log("clickloading")
             }
         });
-        
+
         //移除
         $('#remove').on("click",function (argument) {
             uiLoading.stop();
@@ -24,5 +26,5 @@
         $('#text').on("click",function (argument) {
             uiLoading.text("修改文本");
         })
-        
+
 })

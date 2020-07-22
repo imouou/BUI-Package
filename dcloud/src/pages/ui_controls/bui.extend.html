@@ -1,0 +1,62 @@
+﻿<style>
+    .bui-foldmenu {
+        /* 导致ios 8 无法滚动 */
+        overflow-y: auto;
+        border-top: 1px solid #eee;
+    }
+    
+    .bui-foldmenu>dt,
+    .bui-foldmenu>[class*=bui-btn] {
+        border: 0;
+        border-bottom: 1px solid #eee;
+    }
+    /*  默认隐藏内容 */
+    
+    .bui-foldmenu>dd {
+        display: none;
+        border: 0;
+        overflow-y: auto;
+        border-bottom: 1px solid #eee;
+        background: #fff;
+    }
+    /*  图标 */
+    
+    .bui-foldmenu .icon-foldmenu {
+        -webkit-transition: -webkit-transform 0.3s ease-in-out 0s;
+        transition: transform 0.3s ease-in-out 0s;
+    }
+    
+    .bui-foldmenu .icon-foldmenu:before {
+        content: "\e649";
+    }
+    /* 激活的二级菜单的时候,把箭头翻转 */
+    
+    .bui-foldmenu>.active+dd {
+        display: block;
+    }
+    
+    .bui-foldmenu>.active .icon-foldmenu {
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+    }
+</style>
+<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">
+            扩展插件示例
+        </div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+        <dl id="folder" class="bui-foldmenu">
+            <dt class="bui-btn bui-box"><div class="span1">菜单</div><i class="icon-foldmenu"></i></dt>
+            <dd>内容</dd>
+            <dt class="bui-btn bui-box"><div class="span1">菜单2</div><i class="icon-foldmenu"></i></dt>
+            <dd>内容2</dd>
+        </dl>
+    </main>
+</div>

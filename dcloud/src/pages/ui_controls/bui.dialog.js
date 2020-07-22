@@ -18,7 +18,11 @@
         id: "#dialogRight",
         effect: "fadeInRight",
         position: "right",
-        fullscreen: true,
+        width: 200,
+        fullscreen: false,
+        style: {
+            left: "auto"
+        },
         buttons: []
     });
 
@@ -62,4 +66,23 @@
         uiDialogDown.open();
     })
 
+
+    // 全屏
+    var uiDialogFull = bui.dialog({
+        id: "#dialogFull",
+        position: "top",
+        fullscreen: true,
+        useBox: true,
+        buttons: []
+    });
+
+    router.$('#btnOpenFull').on("click", function() {
+        uiDialogFull.open();
+    })
+
+    return {
+        init: function() {
+            console.log(router.$('#btnOpenDown').length)
+        }
+    }
 })
